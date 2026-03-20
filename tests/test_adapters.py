@@ -16,6 +16,7 @@ from nist_strm.adapters import (
     CDMCAdapter,
     ISO42001Adapter,
     OECDAIPrinciplesAdapter,
+    CDAMMAdapter,
     CSAAICMAdapter,
     parse_identifier,
     validate_identifier,
@@ -237,6 +238,41 @@ class TestOECDAIPrinciplesAdapter:
             OECDAIPrinciplesAdapter.parse("3.1")
 
 
+class TestCDAMMAdapter:
+    def test_parse_indicator(self):
+        p = CDAMMAdapter.parse("DS.03")
+        assert p.components == ["DS", "03"]
+        assert p.hierarchy_level == 1
+        assert p.metadata["dimension_name"] == "Data Strategy"
+
+    def test_parse_sub_indicator(self):
+        p = CDAMMAdapter.parse("DG.12.2")
+        assert p.components == ["DG", "12", "2"]
+        assert p.hierarchy_level == 2
+        assert p.metadata["dimension_name"] == "Data Governance"
+
+    def test_parse_analytics(self):
+        p = CDAMMAdapter.parse("AN.45")
+        assert p.components == ["AN", "45"]
+        assert p.metadata["dimension_name"] == "Analytics"
+
+    def test_parse_technology(self):
+        p = CDAMMAdapter.parse("TI.08.1")
+        assert p.components == ["TI", "08", "1"]
+        assert p.metadata["dimension_name"] == "Technology & Infrastructure"
+
+    def test_validate(self):
+        assert CDAMMAdapter.validate("DS.03")
+        assert CDAMMAdapter.validate("DG.12.2")
+        assert CDAMMAdapter.validate("AN.100")  # 200+ indicators
+        assert not CDAMMAdapter.validate("CDAMM-1")
+        assert not CDAMMAdapter.validate("DS")  # missing indicator
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            CDAMMAdapter.parse("bad")
+
+
 class TestCSAAICMAdapter:
     def test_parse(self):
         p = CSAAICMAdapter.parse("AIS-01")
@@ -264,7 +300,7 @@ class TestRegistryFunctions:
     def test_all_adapters_registered(self):
         expected = {
             "CSF2", "SP800-53", "AI-RMF", "ISO27001", "CISv8", "COBIT2019",
-            "NICE", "DMBOK", "DCAM", "CDMC", "ISO42001", "OECD-AI", "CSA-AICM",
+            "NICE", "DMBOK", "DCAM", "CDMC", "CDAMM", "ISO42001", "OECD-AI", "CSA-AICM",
         }
         assert set(ADAPTER_REGISTRY.keys()) == expected
 

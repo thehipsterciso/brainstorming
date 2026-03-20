@@ -330,6 +330,47 @@ class OECDAIPrinciplesAdapter(IdentifierAdapter):
         )
 
 
+class CDAMMAdapter(IdentifierAdapter):
+    """Caserta Data & Analytics Maturity Model (Doug Laney): {DIM}.{indicator}
+    or {DIM}.{indicator}.{sub} (e.g., DS.03, DG.12.2)
+
+    Dimensions: DS=Data Strategy, DG=Data Governance, DA=Data Architecture,
+    DL=Data Literacy & Culture, AN=Analytics, TI=Technology & Infrastructure
+    200+ vendor-independent best-practice maturity indicators.
+    """
+
+    framework_name: ClassVar[str] = "CDAMM"
+    identifier_pattern: ClassVar[str] = r"^[A-Z]{2}\.\d{1,3}(\.\d{1,2})?$"
+
+    DIMENSION_NAMES: ClassVar[dict[str, str]] = {
+        "DS": "Data Strategy",
+        "DG": "Data Governance",
+        "DA": "Data Architecture",
+        "DL": "Data Literacy & Culture",
+        "AN": "Analytics",
+        "TI": "Technology & Infrastructure",
+    }
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^([A-Z]{2})\.(\d{1,3})(?:\.(\d{1,2}))?$", identifier)
+        if not match:
+            raise ValueError(f"Invalid CDAMM identifier: {identifier}")
+        dimension, indicator, sub = match.groups()
+        components = [dimension, indicator]
+        level = 1  # indicator
+        if sub:
+            components.append(sub)
+            level = 2  # sub-indicator
+        return ParsedIdentifier(
+            framework="CDAMM",
+            raw=identifier,
+            components=components,
+            hierarchy_level=level,
+            metadata={"dimension_name": cls.DIMENSION_NAMES.get(dimension, dimension)},
+        )
+
+
 class CSAAICMAdapter(IdentifierAdapter):
     """CSA AI Controls Matrix (AICM): {DOMAIN}-{##} (e.g., AIS-01, MDS-03, DSP-12)
 
@@ -365,6 +406,7 @@ ADAPTER_REGISTRY: dict[str, type[IdentifierAdapter]] = {
     "DMBOK": DMBOKAdapter,
     "DCAM": DCAMAdapter,
     "CDMC": CDMCAdapter,
+    "CDAMM": CDAMMAdapter,
     "ISO42001": ISO42001Adapter,
     "OECD-AI": OECDAIPrinciplesAdapter,
     "CSA-AICM": CSAAICMAdapter,
