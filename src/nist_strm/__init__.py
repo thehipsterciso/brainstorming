@@ -32,6 +32,12 @@ from nist_strm.models import (
 )
 from nist_strm.engine import STRMEngine
 
+# AI mapper is optional — requires `pip install nist-strm[ai]`
+try:
+    from nist_strm.ai_mapper import AIMapper, ElementFilter, MappingBatchResult
+except ImportError:
+    pass
+
 __all__ = [
     # Enums
     "AnalysisSourceType",
@@ -58,4 +64,8 @@ __all__ = [
     "ProvenanceRecord",
     # Engine
     "STRMEngine",
+    # AI Mapper (optional)
+    "AIMapper",
+    "ElementFilter",
+    "MappingBatchResult",
 ]
