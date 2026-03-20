@@ -251,6 +251,108 @@ class DCAMAdapter(IdentifierAdapter):
         )
 
 
+class CDMCAdapter(IdentifierAdapter):
+    """EDM Council CDMC: {Component}.{Capability}.{Sub} (e.g., 1.2, 3.1.4)
+
+    6 components, 14 capabilities, 37 sub-capabilities for cloud data management.
+    Components: 1=Governance & Accountability, 2=Cataloguing & Classification,
+    3=Accessibility & Usage, 4=Protection & Privacy, 5=Lifecycle, 6=Technical Architecture
+    """
+
+    framework_name: ClassVar[str] = "CDMC"
+    identifier_pattern: ClassVar[str] = r"^\d\.\d{1,2}(\.\d{1,2})?$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^(\d)\.(\d{1,2})(?:\.(\d{1,2}))?$", identifier)
+        if not match:
+            raise ValueError(f"Invalid CDMC identifier: {identifier}")
+        component, capability, sub = match.groups()
+        components = [component, capability]
+        level = 1  # capability
+        if sub:
+            components.append(sub)
+            level = 2  # sub-capability
+        return ParsedIdentifier(
+            framework="CDMC",
+            raw=identifier,
+            components=components,
+            hierarchy_level=level,
+        )
+
+
+class ISO42001Adapter(IdentifierAdapter):
+    """ISO/IEC 42001:2023 AI Management System: A.{domain}.{control} (e.g., A.2.1, A.9.4)
+
+    9 Annex A domains with 38 total controls for AI governance.
+    """
+
+    framework_name: ClassVar[str] = "ISO42001"
+    identifier_pattern: ClassVar[str] = r"^A\.\d{1,2}\.\d{1,2}$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^A\.(\d{1,2})\.(\d{1,2})$", identifier)
+        if not match:
+            raise ValueError(f"Invalid ISO 42001 identifier: {identifier}")
+        domain, control = match.groups()
+        return ParsedIdentifier(
+            framework="ISO42001",
+            raw=identifier,
+            components=["A", domain, control],
+            hierarchy_level=2,
+        )
+
+
+class OECDAIPrinciplesAdapter(IdentifierAdapter):
+    """OECD AI Principles: {section}.{principle} (e.g., 1.1, 2.5)
+
+    Section 1 = Values-based principles (1.1-1.5)
+    Section 2 = Policy recommendations (2.1-2.5)
+    """
+
+    framework_name: ClassVar[str] = "OECD-AI"
+    identifier_pattern: ClassVar[str] = r"^[12]\.[1-5]$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^([12])\.([1-5])$", identifier)
+        if not match:
+            raise ValueError(f"Invalid OECD AI Principles identifier: {identifier}")
+        section, principle = match.groups()
+        section_names = {"1": "Values", "2": "Policy"}
+        return ParsedIdentifier(
+            framework="OECD-AI",
+            raw=identifier,
+            components=[section, principle],
+            hierarchy_level=1,
+            metadata={"section_type": section_names[section]},
+        )
+
+
+class CSAAICMAdapter(IdentifierAdapter):
+    """CSA AI Controls Matrix (AICM): {DOMAIN}-{##} (e.g., AIS-01, MDS-03, DSP-12)
+
+    18 security domains, 243 control objectives. Extends CSA CCM naming convention.
+    """
+
+    framework_name: ClassVar[str] = "CSA-AICM"
+    identifier_pattern: ClassVar[str] = r"^[A-Z]{2,4}-\d{2}$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^([A-Z]{2,4})-(\d{2})$", identifier)
+        if not match:
+            raise ValueError(f"Invalid CSA AICM identifier: {identifier}")
+        domain, control_num = match.groups()
+        return ParsedIdentifier(
+            framework="CSA-AICM",
+            raw=identifier,
+            components=[domain, control_num],
+            hierarchy_level=1,
+        )
+
+
 # Registry of available adapters
 ADAPTER_REGISTRY: dict[str, type[IdentifierAdapter]] = {
     "CSF2": CSF2Adapter,
@@ -262,6 +364,10 @@ ADAPTER_REGISTRY: dict[str, type[IdentifierAdapter]] = {
     "NICE": NICEAdapter,
     "DMBOK": DMBOKAdapter,
     "DCAM": DCAMAdapter,
+    "CDMC": CDMCAdapter,
+    "ISO42001": ISO42001Adapter,
+    "OECD-AI": OECDAIPrinciplesAdapter,
+    "CSA-AICM": CSAAICMAdapter,
 }
 
 

@@ -13,6 +13,10 @@ from nist_strm.adapters import (
     NICEAdapter,
     DMBOKAdapter,
     DCAMAdapter,
+    CDMCAdapter,
+    ISO42001Adapter,
+    OECDAIPrinciplesAdapter,
+    CSAAICMAdapter,
     parse_identifier,
     validate_identifier,
 )
@@ -169,9 +173,99 @@ class TestDCAMAdapter:
             DCAMAdapter.parse("bad")
 
 
+class TestCDMCAdapter:
+    def test_parse_capability(self):
+        p = CDMCAdapter.parse("1.2")
+        assert p.components == ["1", "2"]
+        assert p.hierarchy_level == 1
+
+    def test_parse_sub_capability(self):
+        p = CDMCAdapter.parse("3.1.4")
+        assert p.components == ["3", "1", "4"]
+        assert p.hierarchy_level == 2
+
+    def test_validate(self):
+        assert CDMCAdapter.validate("1.2")
+        assert CDMCAdapter.validate("6.14.37")
+        assert not CDMCAdapter.validate("CDMC-1")
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            CDMCAdapter.parse("bad")
+
+
+class TestISO42001Adapter:
+    def test_parse(self):
+        p = ISO42001Adapter.parse("A.2.1")
+        assert p.components == ["A", "2", "1"]
+        assert p.hierarchy_level == 2
+
+    def test_parse_higher_domain(self):
+        p = ISO42001Adapter.parse("A.9.4")
+        assert p.components == ["A", "9", "4"]
+
+    def test_validate(self):
+        assert ISO42001Adapter.validate("A.2.1")
+        assert ISO42001Adapter.validate("A.9.4")
+        assert not ISO42001Adapter.validate("2.1")    # missing A prefix
+        assert not ISO42001Adapter.validate("A.2")     # needs control number
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            ISO42001Adapter.parse("B.1.1")
+
+
+class TestOECDAIPrinciplesAdapter:
+    def test_parse_values(self):
+        p = OECDAIPrinciplesAdapter.parse("1.1")
+        assert p.components == ["1", "1"]
+        assert p.metadata["section_type"] == "Values"
+
+    def test_parse_policy(self):
+        p = OECDAIPrinciplesAdapter.parse("2.5")
+        assert p.components == ["2", "5"]
+        assert p.metadata["section_type"] == "Policy"
+
+    def test_validate(self):
+        assert OECDAIPrinciplesAdapter.validate("1.1")
+        assert OECDAIPrinciplesAdapter.validate("2.5")
+        assert not OECDAIPrinciplesAdapter.validate("3.1")  # only sections 1-2
+        assert not OECDAIPrinciplesAdapter.validate("1.6")  # only 1-5
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            OECDAIPrinciplesAdapter.parse("3.1")
+
+
+class TestCSAAICMAdapter:
+    def test_parse(self):
+        p = CSAAICMAdapter.parse("AIS-01")
+        assert p.components == ["AIS", "01"]
+        assert p.hierarchy_level == 1
+
+    def test_parse_model_security(self):
+        p = CSAAICMAdapter.parse("MDS-03")
+        assert p.components == ["MDS", "03"]
+
+    def test_validate(self):
+        assert CSAAICMAdapter.validate("AIS-01")
+        assert CSAAICMAdapter.validate("MDS-03")
+        assert CSAAICMAdapter.validate("DSP-12")
+        assert CSAAICMAdapter.validate("GRC-05")
+        assert not CSAAICMAdapter.validate("AIS01")    # missing hyphen
+        assert not CSAAICMAdapter.validate("AIS-1")    # needs two digits
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            CSAAICMAdapter.parse("bad-id")
+
+
 class TestRegistryFunctions:
     def test_all_adapters_registered(self):
-        expected = {"CSF2", "SP800-53", "AI-RMF", "ISO27001", "CISv8", "COBIT2019", "NICE", "DMBOK", "DCAM"}
+        expected = {
+            "CSF2", "SP800-53", "AI-RMF", "ISO27001", "CISv8", "COBIT2019",
+            "NICE", "DMBOK", "DCAM", "CDMC", "ISO42001", "OECD-AI", "CSA-AICM",
+        }
         assert set(ADAPTER_REGISTRY.keys()) == expected
 
     def test_parse_identifier_function(self):
