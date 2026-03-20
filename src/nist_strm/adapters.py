@@ -22,6 +22,7 @@ class ParsedIdentifier:
     raw: str
     components: list[str]
     hierarchy_level: int
+    metadata: dict[str, str] | None = None
 
     @property
     def normalized(self) -> str:
@@ -169,6 +170,87 @@ class COBIT2019Adapter(IdentifierAdapter):
         )
 
 
+class NICEAdapter(IdentifierAdapter):
+    """NICE Workforce Framework: {Type}{####} (e.g., T0001, K0233, S0015, A0001)
+
+    Type codes: T=Task, K=Knowledge, S=Skill, A=Ability
+    """
+
+    framework_name: ClassVar[str] = "NICE"
+    identifier_pattern: ClassVar[str] = r"^[TKSA]\d{4}$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^([TKSA])(\d{4})$", identifier)
+        if not match:
+            raise ValueError(f"Invalid NICE identifier: {identifier}")
+        type_code, number = match.groups()
+        type_names = {"T": "Task", "K": "Knowledge", "S": "Skill", "A": "Ability"}
+        return ParsedIdentifier(
+            framework="NICE",
+            raw=identifier,
+            components=[type_code, number],
+            hierarchy_level=1,
+            metadata={"type_name": type_names.get(type_code, type_code)},
+        )
+
+
+class DMBOKAdapter(IdentifierAdapter):
+    """DAMA DMBOK2: {KA}.{topic}.{subtopic} (e.g., 1.3.2, 14.1.1)
+
+    Knowledge Areas 1-14 (Data Governance, Data Architecture, etc.)
+    """
+
+    framework_name: ClassVar[str] = "DMBOK"
+    identifier_pattern: ClassVar[str] = r"^\d{1,2}\.\d+(\.\d+)?$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^(\d{1,2})\.(\d+)(?:\.(\d+))?$", identifier)
+        if not match:
+            raise ValueError(f"Invalid DMBOK identifier: {identifier}")
+        ka, topic, subtopic = match.groups()
+        components = [ka, topic]
+        level = 1
+        if subtopic:
+            components.append(subtopic)
+            level = 2
+        return ParsedIdentifier(
+            framework="DMBOK",
+            raw=identifier,
+            components=components,
+            hierarchy_level=level,
+        )
+
+
+class DCAMAdapter(IdentifierAdapter):
+    """EDM Council DCAM: {Component}.{Capability}.{Sub} (e.g., 1.1, 1.1.1, 7.3.2)
+
+    Components 1-8 (Strategy, Program, Governance, Architecture, Technology, etc.)
+    """
+
+    framework_name: ClassVar[str] = "DCAM"
+    identifier_pattern: ClassVar[str] = r"^\d+\.\d+(\.\d+)?$"
+
+    @classmethod
+    def parse(cls, identifier: str) -> ParsedIdentifier:
+        match = re.match(r"^(\d+)\.(\d+)(?:\.(\d+))?$", identifier)
+        if not match:
+            raise ValueError(f"Invalid DCAM identifier: {identifier}")
+        component, capability, sub = match.groups()
+        components = [component, capability]
+        level = 1  # capability level
+        if sub:
+            components.append(sub)
+            level = 2  # sub-capability
+        return ParsedIdentifier(
+            framework="DCAM",
+            raw=identifier,
+            components=components,
+            hierarchy_level=level,
+        )
+
+
 # Registry of available adapters
 ADAPTER_REGISTRY: dict[str, type[IdentifierAdapter]] = {
     "CSF2": CSF2Adapter,
@@ -177,6 +259,9 @@ ADAPTER_REGISTRY: dict[str, type[IdentifierAdapter]] = {
     "ISO27001": ISO27001Adapter,
     "CISv8": CISControlsAdapter,
     "COBIT2019": COBIT2019Adapter,
+    "NICE": NICEAdapter,
+    "DMBOK": DMBOKAdapter,
+    "DCAM": DCAMAdapter,
 }
 
 

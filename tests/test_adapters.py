@@ -10,6 +10,9 @@ from nist_strm.adapters import (
     ISO27001Adapter,
     CISControlsAdapter,
     COBIT2019Adapter,
+    NICEAdapter,
+    DMBOKAdapter,
+    DCAMAdapter,
     parse_identifier,
     validate_identifier,
 )
@@ -94,9 +97,81 @@ class TestCOBIT2019Adapter:
         assert not COBIT2019Adapter.validate("APO-01")
 
 
+class TestNICEAdapter:
+    def test_parse_task(self):
+        p = NICEAdapter.parse("T0001")
+        assert p.components == ["T", "0001"]
+        assert p.metadata["type_name"] == "Task"
+
+    def test_parse_knowledge(self):
+        p = NICEAdapter.parse("K0233")
+        assert p.components == ["K", "0233"]
+        assert p.metadata["type_name"] == "Knowledge"
+
+    def test_parse_skill(self):
+        p = NICEAdapter.parse("S0015")
+        assert p.metadata["type_name"] == "Skill"
+
+    def test_parse_ability(self):
+        p = NICEAdapter.parse("A0001")
+        assert p.metadata["type_name"] == "Ability"
+
+    def test_validate(self):
+        assert NICEAdapter.validate("T0001")
+        assert NICEAdapter.validate("K0233")
+        assert not NICEAdapter.validate("X0001")  # invalid type
+        assert not NICEAdapter.validate("T001")   # too few digits
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            NICEAdapter.parse("Z9999")
+
+
+class TestDMBOKAdapter:
+    def test_parse_topic(self):
+        p = DMBOKAdapter.parse("1.3")
+        assert p.components == ["1", "3"]
+        assert p.hierarchy_level == 1
+
+    def test_parse_subtopic(self):
+        p = DMBOKAdapter.parse("14.1.1")
+        assert p.components == ["14", "1", "1"]
+        assert p.hierarchy_level == 2
+
+    def test_validate(self):
+        assert DMBOKAdapter.validate("1.3")
+        assert DMBOKAdapter.validate("14.1.1")
+        assert not DMBOKAdapter.validate("DMBOK-1")
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            DMBOKAdapter.parse("bad")
+
+
+class TestDCAMAdapter:
+    def test_parse_capability(self):
+        p = DCAMAdapter.parse("1.1")
+        assert p.components == ["1", "1"]
+        assert p.hierarchy_level == 1
+
+    def test_parse_sub_capability(self):
+        p = DCAMAdapter.parse("7.3.2")
+        assert p.components == ["7", "3", "2"]
+        assert p.hierarchy_level == 2
+
+    def test_validate(self):
+        assert DCAMAdapter.validate("1.1")
+        assert DCAMAdapter.validate("7.3.2")
+        assert not DCAMAdapter.validate("DCAM-1")
+
+    def test_parse_invalid_raises(self):
+        with pytest.raises(ValueError):
+            DCAMAdapter.parse("bad")
+
+
 class TestRegistryFunctions:
     def test_all_adapters_registered(self):
-        expected = {"CSF2", "SP800-53", "AI-RMF", "ISO27001", "CISv8", "COBIT2019"}
+        expected = {"CSF2", "SP800-53", "AI-RMF", "ISO27001", "CISv8", "COBIT2019", "NICE", "DMBOK", "DCAM"}
         assert set(ADAPTER_REGISTRY.keys()) == expected
 
     def test_parse_identifier_function(self):
