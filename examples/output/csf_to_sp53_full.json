@@ -1,0 +1,830 @@
+{
+  "metadata": {
+    "focal_document": "nist-csf-2.0",
+    "reference_document": "nist-sp800-53r5",
+    "total_mappings": 13,
+    "source": "expert-curated + AI provenance pipeline",
+    "timestamp": "2026-03-20T23:31:43.543527+00:00"
+  },
+  "mappings": [
+    {
+      "id": "a7210931-d7e3-4cd0-96fe-c50ca20812a9",
+      "concept_pair": {
+        "focal_element_id": "csf-GV.OC",
+        "focal_element_description": "Organizational Context: The circumstances - mission, stakeholder expectations, dependencies, and legal, regulatory, and contractual requirements - surrounding the organization's cybersecurity risk man",
+        "reference_element_id": "sp53-PM-1",
+        "reference_element_description": "PM-1 Information Security Program Plan: Develop and disseminate an organization-wide information security program plan that: Provides an overview of the requirements for the security program and a des"
+      },
+      "relationship": "superset of",
+      "rationale": "functional",
+      "strength": 7,
+      "security_control_baseline": null,
+      "comments": "CSF GV.OC (Organizational Context) requires understanding the organizational mission, stakeholder expectations, dependencies, and legal/regulatory requirements in the context of cybersecurity risk. SP 800-53 PM-1 (Information Security Program Plan) requires developing and disseminating an organization-wide information security program plan. GV.OC is broader \u2014 it encompasses the full organizational context that informs cybersecurity risk management, while PM-1 focuses specifically on the program plan artifact. The program plan is one output of understanding organizational context.",
+      "confidence": {
+        "relationship": "superset of",
+        "rationale": "functional",
+        "strength": 7,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "112c339f-7db0-4a99-aed8-9d2c00f699ac",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.536390Z",
+        "ended_at": "2026-03-20T23:31:43.536390Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-GV.OC",
+          "sp53-PM-1"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: GV.OC -> PM-1",
+        "ai_raw_output": "{\"focal_id\": \"csf-GV.OC\", \"ref_id\": \"sp53-PM-1\", \"relationship\": \"superset of\", \"rationale\": \"functional\", \"strength\": 7, \"confidence\": 0.85, \"analysis\": \"CSF GV.OC (Organizational Context) requires understanding the organizational mission, stakeholder expectations, dependencies, and legal/regulatory requirements in the context of cybersecurity risk. SP 800-53 PM-1 (Information Security Program Plan) requires developing and disseminating an organization-wide information security program plan. GV.OC is broader \\u2014 it encompasses the full organizational context that informs cybersecurity risk management, while PM-1 focuses specifically on the program plan artifact. The program plan is one output of understanding organizational context.\"}",
+        "ai_confidence_score": 0.85,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.536390Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.536390Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "b86cb00c-2423-40f7-884e-1fd12a97558a",
+      "concept_pair": {
+        "focal_element_id": "csf-GV.PO",
+        "focal_element_description": "Policy: Organizational cybersecurity policy is established, communicated, and enforced",
+        "reference_element_id": "sp53-PM-1",
+        "reference_element_description": "PM-1 Information Security Program Plan: Develop and disseminate an organization-wide information security program plan that: Provides an overview of the requirements for the security program and a des"
+      },
+      "relationship": "intersects with",
+      "rationale": "semantic",
+      "strength": 7,
+      "security_control_baseline": null,
+      "comments": "CSF GV.PO (Policy) addresses establishing, communicating, and enforcing cybersecurity risk management policy. SP 800-53 PM-1 (Information Security Program Plan) addresses the program plan that provides an overview of security requirements and controls. Both address organizational governance artifacts, but GV.PO focuses on policy while PM-1 focuses on the broader program plan. They intersect where policy is a component of the program.",
+      "confidence": {
+        "relationship": "intersects with",
+        "rationale": "semantic",
+        "strength": 7,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "a03cbe18-b3be-45b0-8939-639a24b99449",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538018Z",
+        "ended_at": "2026-03-20T23:31:43.538018Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-GV.PO",
+          "sp53-PM-1"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: GV.PO -> PM-1",
+        "ai_raw_output": "{\"focal_id\": \"csf-GV.PO\", \"ref_id\": \"sp53-PM-1\", \"relationship\": \"intersects with\", \"rationale\": \"semantic\", \"strength\": 7, \"confidence\": 0.8, \"analysis\": \"CSF GV.PO (Policy) addresses establishing, communicating, and enforcing cybersecurity risk management policy. SP 800-53 PM-1 (Information Security Program Plan) addresses the program plan that provides an overview of security requirements and controls. Both address organizational governance artifacts, but GV.PO focuses on policy while PM-1 focuses on the broader program plan. They intersect where policy is a component of the program.\"}",
+        "ai_confidence_score": 0.8,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538018Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538018Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "3979dde5-f697-40c9-a2d9-85ef7da81b88",
+      "concept_pair": {
+        "focal_element_id": "csf-GV.RR",
+        "focal_element_description": "Roles, Responsibilities, and Authorities: Cybersecurity roles, responsibilities, and authorities to foster accountability, performance assessment, and continuous improvement are established and commun",
+        "reference_element_id": "sp53-PM-2",
+        "reference_element_description": "PM-2 Information Security Program Leadership Role: Appoint a senior agency information security officer with the mission and resources to coordinate, develop, implement, and maintain an organization-w"
+      },
+      "relationship": "superset of",
+      "rationale": "functional",
+      "strength": 8,
+      "security_control_baseline": null,
+      "comments": "CSF GV.RR (Roles, Responsibilities, and Authorities) requires that cybersecurity roles, responsibilities, and authorities are established and communicated. SP 800-53 PM-2 (Information Security Program Leadership Role) requires appointing a senior information security officer. GV.RR is broader \u2014 it covers all cybersecurity roles across the organization, while PM-2 specifically addresses the senior leadership appointment. PM-2 is a subset of the role definition required by GV.RR.",
+      "confidence": {
+        "relationship": "superset of",
+        "rationale": "functional",
+        "strength": 8,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "07ba6d25-22da-40a4-8b6b-30cf9b4a7029",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538134Z",
+        "ended_at": "2026-03-20T23:31:43.538134Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-GV.RR",
+          "sp53-PM-2"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: GV.RR -> PM-2",
+        "ai_raw_output": "{\"focal_id\": \"csf-GV.RR\", \"ref_id\": \"sp53-PM-2\", \"relationship\": \"superset of\", \"rationale\": \"functional\", \"strength\": 8, \"confidence\": 0.88, \"analysis\": \"CSF GV.RR (Roles, Responsibilities, and Authorities) requires that cybersecurity roles, responsibilities, and authorities are established and communicated. SP 800-53 PM-2 (Information Security Program Leadership Role) requires appointing a senior information security officer. GV.RR is broader \\u2014 it covers all cybersecurity roles across the organization, while PM-2 specifically addresses the senior leadership appointment. PM-2 is a subset of the role definition required by GV.RR.\"}",
+        "ai_confidence_score": 0.88,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538134Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538134Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "99ae809e-cc14-476e-8a73-f46f6a5c82fc",
+      "concept_pair": {
+        "focal_element_id": "csf-ID.AM",
+        "focal_element_description": "Asset Management: Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with th",
+        "reference_element_id": "sp53-PM-5",
+        "reference_element_description": "PM-5 System Inventory: Develop and update {{ insert: param, pm-05_odp }} an inventory of organizational systems."
+      },
+      "relationship": "superset of",
+      "rationale": "semantic",
+      "strength": 7,
+      "security_control_baseline": null,
+      "comments": "CSF ID.AM (Asset Management) requires that assets (data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed. SP 800-53 PM-5 (System Inventory) requires maintaining an inventory of organizational systems. ID.AM covers a much broader scope of assets while PM-5 focuses specifically on system inventory. System inventory is one aspect of the broader asset management required by ID.AM.",
+      "confidence": {
+        "relationship": "superset of",
+        "rationale": "semantic",
+        "strength": 7,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "e09c2b9c-1d01-41c7-b8a8-4dc3127c30fc",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538222Z",
+        "ended_at": "2026-03-20T23:31:43.538222Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-ID.AM",
+          "sp53-PM-5"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: ID.AM -> PM-5",
+        "ai_raw_output": "{\"focal_id\": \"csf-ID.AM\", \"ref_id\": \"sp53-PM-5\", \"relationship\": \"superset of\", \"rationale\": \"semantic\", \"strength\": 7, \"confidence\": 0.82, \"analysis\": \"CSF ID.AM (Asset Management) requires that assets (data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed. SP 800-53 PM-5 (System Inventory) requires maintaining an inventory of organizational systems. ID.AM covers a much broader scope of assets while PM-5 focuses specifically on system inventory. System inventory is one aspect of the broader asset management required by ID.AM.\"}",
+        "ai_confidence_score": 0.82,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538222Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538222Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "23f8fdb8-7b68-4623-9145-599f0e579aba",
+      "concept_pair": {
+        "focal_element_id": "csf-ID.AM",
+        "focal_element_description": "Asset Management: Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with th",
+        "reference_element_id": "sp53-SC-7",
+        "reference_element_description": "SC-7 Boundary Protection: Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system; Implement subnetworks for public"
+      },
+      "relationship": "not related to",
+      "rationale": "syntactic",
+      "strength": 0,
+      "security_control_baseline": null,
+      "comments": "CSF ID.AM (Asset Management) addresses identifying and managing organizational assets. SP 800-53 SC-7 (Boundary Protection) addresses monitoring and controlling communications at system boundaries. These address fundamentally different concerns \u2014 asset identification vs. network boundary enforcement. No meaningful conceptual overlap exists.",
+      "confidence": {
+        "relationship": "not related to",
+        "rationale": "syntactic",
+        "strength": 0,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "278c794d-6ffb-4164-a15b-bd34eb0297fc",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538307Z",
+        "ended_at": "2026-03-20T23:31:43.538307Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-ID.AM",
+          "sp53-SC-7"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: ID.AM -> SC-7",
+        "ai_raw_output": "{\"focal_id\": \"csf-ID.AM\", \"ref_id\": \"sp53-SC-7\", \"relationship\": \"not related to\", \"rationale\": \"syntactic\", \"strength\": 0, \"confidence\": 0.95, \"analysis\": \"CSF ID.AM (Asset Management) addresses identifying and managing organizational assets. SP 800-53 SC-7 (Boundary Protection) addresses monitoring and controlling communications at system boundaries. These address fundamentally different concerns \\u2014 asset identification vs. network boundary enforcement. No meaningful conceptual overlap exists.\"}",
+        "ai_confidence_score": 0.95,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538307Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538307Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "450c0f3a-5423-4f21-aeb2-135b80d8c83e",
+      "concept_pair": {
+        "focal_element_id": "csf-ID.RA",
+        "focal_element_description": "Risk Assessment: The cybersecurity risk to the organization, assets, and individuals is understood by the organization",
+        "reference_element_id": "sp53-PM-9",
+        "reference_element_description": "PM-9 Risk Management Strategy: Develops a comprehensive strategy to manage: Security risk to organizational operations and assets, individuals, other organizations, and the Nation associated with the "
+      },
+      "relationship": "intersects with",
+      "rationale": "functional",
+      "strength": 6,
+      "security_control_baseline": null,
+      "comments": "CSF ID.RA (Risk Assessment) requires understanding cybersecurity risks to the organization, its assets, and individuals. SP 800-53 PM-9 (Risk Management Strategy) requires developing a comprehensive strategy for managing risk to organizational operations and assets. They intersect: risk assessment is an input to risk management strategy, but ID.RA focuses on assessment activities while PM-9 focuses on the strategic framework for managing those risks.",
+      "confidence": {
+        "relationship": "intersects with",
+        "rationale": "functional",
+        "strength": 6,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "6b8bb2c8-9709-44f9-8462-c6a1ec27e692",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538397Z",
+        "ended_at": "2026-03-20T23:31:43.538397Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-ID.RA",
+          "sp53-PM-9"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: ID.RA -> PM-9",
+        "ai_raw_output": "{\"focal_id\": \"csf-ID.RA\", \"ref_id\": \"sp53-PM-9\", \"relationship\": \"intersects with\", \"rationale\": \"functional\", \"strength\": 6, \"confidence\": 0.78, \"analysis\": \"CSF ID.RA (Risk Assessment) requires understanding cybersecurity risks to the organization, its assets, and individuals. SP 800-53 PM-9 (Risk Management Strategy) requires developing a comprehensive strategy for managing risk to organizational operations and assets. They intersect: risk assessment is an input to risk management strategy, but ID.RA focuses on assessment activities while PM-9 focuses on the strategic framework for managing those risks.\"}",
+        "ai_confidence_score": 0.78,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538397Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538397Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "58fb2df1-d044-4734-995a-271c589c66cf",
+      "concept_pair": {
+        "focal_element_id": "csf-PR.AA",
+        "focal_element_description": "Identity Management, Authentication, and Access Control: Access to physical and logical assets is limited to authorized users, services, and hardware and managed commensurate with the assessed risk of",
+        "reference_element_id": "sp53-AC-1",
+        "reference_element_description": "AC-1 Policy and Procedures: Develop, document, and disseminate to {{ insert: param, ac-1_prm_1 }}: {{ insert: param, ac-01_odp.03 }} access control policy that: Procedures to facilitate the implementa"
+      },
+      "relationship": "superset of",
+      "rationale": "semantic",
+      "strength": 8,
+      "security_control_baseline": null,
+      "comments": "CSF PR.AA (Identity Management, Authentication, and Access Control) requires managing identities and credentials for authorized users, services, and hardware. SP 800-53 AC-1 (Policy and Procedures) requires developing access control policy and procedures. PR.AA encompasses the full scope of identity and access management, while AC-1 addresses only the policy and procedures component. AC-1 is a foundational element within the broader PR.AA scope.",
+      "confidence": {
+        "relationship": "superset of",
+        "rationale": "semantic",
+        "strength": 8,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "6da616cd-f4fe-4050-8e5d-bfa775379da6",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538475Z",
+        "ended_at": "2026-03-20T23:31:43.538475Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-PR.AA",
+          "sp53-AC-1"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: PR.AA -> AC-1",
+        "ai_raw_output": "{\"focal_id\": \"csf-PR.AA\", \"ref_id\": \"sp53-AC-1\", \"relationship\": \"superset of\", \"rationale\": \"semantic\", \"strength\": 8, \"confidence\": 0.9, \"analysis\": \"CSF PR.AA (Identity Management, Authentication, and Access Control) requires managing identities and credentials for authorized users, services, and hardware. SP 800-53 AC-1 (Policy and Procedures) requires developing access control policy and procedures. PR.AA encompasses the full scope of identity and access management, while AC-1 addresses only the policy and procedures component. AC-1 is a foundational element within the broader PR.AA scope.\"}",
+        "ai_confidence_score": 0.9,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538475Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538475Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "52529c24-c631-4c95-ba35-641b333fa7dd",
+      "concept_pair": {
+        "focal_element_id": "csf-PR.AA",
+        "focal_element_description": "Identity Management, Authentication, and Access Control: Access to physical and logical assets is limited to authorized users, services, and hardware and managed commensurate with the assessed risk of",
+        "reference_element_id": "sp53-AC-2",
+        "reference_element_description": "AC-2 Account Management: Define and document the types of accounts allowed and specifically prohibited for use within the system; Assign account managers; Require {{ insert: param, ac-02_odp.01 }} for"
+      },
+      "relationship": "superset of",
+      "rationale": "functional",
+      "strength": 7,
+      "security_control_baseline": null,
+      "comments": "CSF PR.AA covers identity management, authentication, and access control holistically. SP 800-53 AC-2 (Account Management) addresses managing system accounts including establishing, activating, modifying, reviewing, disabling, and removing accounts. Account management is one operational component of the broader identity and access control scope in PR.AA.",
+      "confidence": {
+        "relationship": "superset of",
+        "rationale": "functional",
+        "strength": 7,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "7af5aa0c-0545-4b09-8d6b-da221c0c2c03",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538550Z",
+        "ended_at": "2026-03-20T23:31:43.538550Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-PR.AA",
+          "sp53-AC-2"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: PR.AA -> AC-2",
+        "ai_raw_output": "{\"focal_id\": \"csf-PR.AA\", \"ref_id\": \"sp53-AC-2\", \"relationship\": \"superset of\", \"rationale\": \"functional\", \"strength\": 7, \"confidence\": 0.85, \"analysis\": \"CSF PR.AA covers identity management, authentication, and access control holistically. SP 800-53 AC-2 (Account Management) addresses managing system accounts including establishing, activating, modifying, reviewing, disabling, and removing accounts. Account management is one operational component of the broader identity and access control scope in PR.AA.\"}",
+        "ai_confidence_score": 0.85,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538550Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538550Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "4a990480-b4d4-4ca3-8701-b3d752f0c6db",
+      "concept_pair": {
+        "focal_element_id": "csf-PR.DS",
+        "focal_element_description": "Data Security: Data are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information",
+        "reference_element_id": "sp53-SC-8",
+        "reference_element_description": "SC-8 Transmission Confidentiality and Integrity: Protect the {{ insert: param, sc-08_odp }} of transmitted information."
+      },
+      "relationship": "superset of",
+      "rationale": "functional",
+      "strength": 6,
+      "security_control_baseline": null,
+      "comments": "CSF PR.DS (Data Security) requires managing data consistent with risk strategy to protect confidentiality, integrity, and availability. SP 800-53 SC-8 (Transmission Confidentiality and Integrity) requires protecting the confidentiality and integrity of transmitted information. PR.DS covers all aspects of data security across the lifecycle, while SC-8 addresses specifically data in transit. Transmission protection is one component of the broader data security scope.",
+      "confidence": {
+        "relationship": "superset of",
+        "rationale": "functional",
+        "strength": 6,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "3214abea-b6e0-4c45-bee9-cf1417ae99af",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538630Z",
+        "ended_at": "2026-03-20T23:31:43.538630Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-PR.DS",
+          "sp53-SC-8"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: PR.DS -> SC-8",
+        "ai_raw_output": "{\"focal_id\": \"csf-PR.DS\", \"ref_id\": \"sp53-SC-8\", \"relationship\": \"superset of\", \"rationale\": \"functional\", \"strength\": 6, \"confidence\": 0.75, \"analysis\": \"CSF PR.DS (Data Security) requires managing data consistent with risk strategy to protect confidentiality, integrity, and availability. SP 800-53 SC-8 (Transmission Confidentiality and Integrity) requires protecting the confidentiality and integrity of transmitted information. PR.DS covers all aspects of data security across the lifecycle, while SC-8 addresses specifically data in transit. Transmission protection is one component of the broader data security scope.\"}",
+        "ai_confidence_score": 0.75,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538630Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538630Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "d2095783-ed1b-4d67-bc70-cc4ffef2785b",
+      "concept_pair": {
+        "focal_element_id": "csf-DE.CM",
+        "focal_element_description": "Continuous Monitoring: Assets are monitored to find anomalies, indicators of compromise, and other potentially adverse events",
+        "reference_element_id": "sp53-SI-4",
+        "reference_element_description": "SI-4 System Monitoring: Monitor the system to detect: Attacks and indicators of potential attacks in accordance with the following monitoring objectives: {{ insert: param, si-04_odp.01 }} ; and Unauth"
+      },
+      "relationship": "intersects with",
+      "rationale": "functional",
+      "strength": 8,
+      "security_control_baseline": null,
+      "comments": "CSF DE.CM (Continuous Monitoring) requires monitoring assets to find anomalies, indicators of compromise, and other potentially adverse events. SP 800-53 SI-4 (System Monitoring) requires monitoring the system to detect attacks, indicators of potential attacks, and unauthorized connections. Strong overlap in monitoring objectives, but DE.CM covers broader asset monitoring while SI-4 is specifically system-level. Conversely SI-4 has specific technical requirements not in DE.CM.",
+      "confidence": {
+        "relationship": "intersects with",
+        "rationale": "functional",
+        "strength": 8,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "bbcb99be-6c61-4d69-9680-c4b1eea20759",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538704Z",
+        "ended_at": "2026-03-20T23:31:43.538704Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-DE.CM",
+          "sp53-SI-4"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: DE.CM -> SI-4",
+        "ai_raw_output": "{\"focal_id\": \"csf-DE.CM\", \"ref_id\": \"sp53-SI-4\", \"relationship\": \"intersects with\", \"rationale\": \"functional\", \"strength\": 8, \"confidence\": 0.88, \"analysis\": \"CSF DE.CM (Continuous Monitoring) requires monitoring assets to find anomalies, indicators of compromise, and other potentially adverse events. SP 800-53 SI-4 (System Monitoring) requires monitoring the system to detect attacks, indicators of potential attacks, and unauthorized connections. Strong overlap in monitoring objectives, but DE.CM covers broader asset monitoring while SI-4 is specifically system-level. Conversely SI-4 has specific technical requirements not in DE.CM.\"}",
+        "ai_confidence_score": 0.88,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538704Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538704Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "33100bec-25af-483b-b768-b678383aa7d4",
+      "concept_pair": {
+        "focal_element_id": "csf-DE.AE",
+        "focal_element_description": "Adverse Event Analysis: Anomalies, indicators of compromise, and other potentially adverse events are analyzed to characterize the events and detect cybersecurity incidents",
+        "reference_element_id": "sp53-AU-6",
+        "reference_element_description": "AU-6 Audit Record Review, Analysis, and Reporting: Review and analyze system audit records {{ insert: param, au-06_odp.01 }} for indications of {{ insert: param, au-06_odp.02 }} and the potential impa"
+      },
+      "relationship": "intersects with",
+      "rationale": "functional",
+      "strength": 7,
+      "security_control_baseline": null,
+      "comments": "CSF DE.AE (Adverse Event Analysis) requires analyzing anomalies and events to characterize and detect cybersecurity events. SP 800-53 AU-6 (Audit Record Review, Analysis, and Reporting) requires reviewing and analyzing audit records for indications of inappropriate or unusual activity. Both involve analysis of security events, but DE.AE covers broader event analysis while AU-6 focuses specifically on audit records. AU-6 also includes reporting which DE.AE does not explicitly address.",
+      "confidence": {
+        "relationship": "intersects with",
+        "rationale": "functional",
+        "strength": 7,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "b5b4751a-c7f8-4956-828e-8679f43f81bd",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538777Z",
+        "ended_at": "2026-03-20T23:31:43.538777Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-DE.AE",
+          "sp53-AU-6"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: DE.AE -> AU-6",
+        "ai_raw_output": "{\"focal_id\": \"csf-DE.AE\", \"ref_id\": \"sp53-AU-6\", \"relationship\": \"intersects with\", \"rationale\": \"functional\", \"strength\": 7, \"confidence\": 0.82, \"analysis\": \"CSF DE.AE (Adverse Event Analysis) requires analyzing anomalies and events to characterize and detect cybersecurity events. SP 800-53 AU-6 (Audit Record Review, Analysis, and Reporting) requires reviewing and analyzing audit records for indications of inappropriate or unusual activity. Both involve analysis of security events, but DE.AE covers broader event analysis while AU-6 focuses specifically on audit records. AU-6 also includes reporting which DE.AE does not explicitly address.\"}",
+        "ai_confidence_score": 0.82,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538777Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538777Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "fe7a289f-c79d-441e-a0af-69923c51dfbb",
+      "concept_pair": {
+        "focal_element_id": "csf-RS.MA",
+        "focal_element_description": "Incident Management: Responses to detected cybersecurity incidents are managed",
+        "reference_element_id": "sp53-SI-5",
+        "reference_element_description": "SI-5 Security Alerts, Advisories, and Directives: Receive system security alerts, advisories, and directives from {{ insert: param, si-05_odp.01 }} on an ongoing basis; Generate internal security aler"
+      },
+      "relationship": "intersects with",
+      "rationale": "functional",
+      "strength": 5,
+      "security_control_baseline": null,
+      "comments": "CSF RS.MA (Incident Management) requires managing incidents from detection through lessons learned. SP 800-53 SI-5 (Security Alerts, Advisories, and Directives) requires receiving and generating security alerts and advisories. These intersect where incident management generates and consumes security alerts, but RS.MA covers the full incident lifecycle while SI-5 focuses specifically on alert distribution.",
+      "confidence": {
+        "relationship": "intersects with",
+        "rationale": "functional",
+        "strength": 5,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "4c9ce189-f782-4e4b-864b-58fe2356c9e1",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538872Z",
+        "ended_at": "2026-03-20T23:31:43.538872Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-RS.MA",
+          "sp53-SI-5"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: RS.MA -> SI-5",
+        "ai_raw_output": "{\"focal_id\": \"csf-RS.MA\", \"ref_id\": \"sp53-SI-5\", \"relationship\": \"intersects with\", \"rationale\": \"functional\", \"strength\": 5, \"confidence\": 0.72, \"analysis\": \"CSF RS.MA (Incident Management) requires managing incidents from detection through lessons learned. SP 800-53 SI-5 (Security Alerts, Advisories, and Directives) requires receiving and generating security alerts and advisories. These intersect where incident management generates and consumes security alerts, but RS.MA covers the full incident lifecycle while SI-5 focuses specifically on alert distribution.\"}",
+        "ai_confidence_score": 0.72,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538872Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538872Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    },
+    {
+      "id": "58859eae-ca78-4140-a13c-e021488a0650",
+      "concept_pair": {
+        "focal_element_id": "csf-RC.RP",
+        "focal_element_description": "Incident Recovery Plan Execution: Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents",
+        "reference_element_id": "sp53-SC-7",
+        "reference_element_description": "SC-7 Boundary Protection: Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system; Implement subnetworks for public"
+      },
+      "relationship": "not related to",
+      "rationale": "syntactic",
+      "strength": 0,
+      "security_control_baseline": null,
+      "comments": "CSF RC.RP (Incident Recovery Plan Execution) addresses executing the recovery portion of the incident response plan. SP 800-53 SC-7 (Boundary Protection) addresses monitoring and controlling communications at system boundaries. Recovery plan execution and boundary protection are operationally distinct with no conceptual overlap.",
+      "confidence": {
+        "relationship": "not related to",
+        "rationale": "syntactic",
+        "strength": 0,
+        "source_text_specificity": "H",
+        "analyst_expertise": "H",
+        "peer_reviewed": false,
+        "framework_version_current": null,
+        "last_review_date": null,
+        "decay_factor": null
+      },
+      "provenance": {
+        "activity_id": "9a8cc2e4-0ee8-46f6-a4bc-929121830a9a",
+        "activity_type": "AIAssistedMapping",
+        "started_at": "2026-03-20T23:31:43.538965Z",
+        "ended_at": "2026-03-20T23:31:43.538965Z",
+        "location": null,
+        "agent_id": "anthropic:claude-sonnet-4-6",
+        "agent_type": "SoftwareAgent",
+        "plan_id": "NIST-IR-8477-STRM",
+        "input_entity_ids": [
+          "csf-RC.RP",
+          "sp53-SC-7"
+        ],
+        "derived_from": []
+      },
+      "ai_provenance": {
+        "ai_model_name": "claude-sonnet-4-6",
+        "ai_model_version": null,
+        "ai_provider": "Anthropic",
+        "system_prompt_hash": "435f78f75fd46d1286675bae2661172efbb7172c23d6665f941eb9007153d41a",
+        "system_prompt_text": null,
+        "user_prompt_text": "Analyze STRM: RC.RP -> SC-7",
+        "ai_raw_output": "{\"focal_id\": \"csf-RC.RP\", \"ref_id\": \"sp53-SC-7\", \"relationship\": \"not related to\", \"rationale\": \"syntactic\", \"strength\": 0, \"confidence\": 0.92, \"analysis\": \"CSF RC.RP (Incident Recovery Plan Execution) addresses executing the recovery portion of the incident response plan. SP 800-53 SC-7 (Boundary Protection) addresses monitoring and controlling communications at system boundaries. Recovery plan execution and boundary protection are operationally distinct with no conceptual overlap.\"}",
+        "ai_confidence_score": 0.92,
+        "confidence_method": "self-assessed",
+        "temperature_setting": 0.0,
+        "tokens_consumed": 1500,
+        "timestamp": "2026-03-20T23:31:43.538965Z"
+      },
+      "human_validation": {
+        "reviewer_id": "PENDING",
+        "review_timestamp": "2026-03-20T23:31:43.538965Z",
+        "status": "PENDING",
+        "confidence_override": null,
+        "modifications_made": null,
+        "reviewer_qualifications": null
+      },
+      "source_type": "AI_GENERATED"
+    }
+  ]
+}

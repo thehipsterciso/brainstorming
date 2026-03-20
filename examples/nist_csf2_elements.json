@@ -1,0 +1,2667 @@
+{
+  "document": {
+    "id": "nist-csf-2.0",
+    "title": "NIST Cybersecurity Framework 2.0",
+    "short_name": "CSF 2.0",
+    "version": "2.0",
+    "author": "National Institute of Standards and Technology",
+    "url": "https://csrc.nist.gov/projects/cybersecurity-framework",
+    "date": "2024-02-26"
+  },
+  "elements": [
+    {
+      "id": "csf-GV",
+      "element_type": "function",
+      "identifier": "GV",
+      "text": "GOVERN. The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored",
+      "parent_id": null,
+      "metadata": {
+        "level": "function"
+      }
+    },
+    {
+      "id": "csf-GV.OC",
+      "element_type": "category",
+      "identifier": "GV.OC",
+      "text": "Organizational Context: The circumstances - mission, stakeholder expectations, dependencies, and legal, regulatory, and contractual requirements - surrounding the organization's cybersecurity risk management decisions are understood",
+      "parent_id": "csf-GV",
+      "metadata": {
+        "level": "category",
+        "function": "GV"
+      }
+    },
+    {
+      "id": "csf-GV.OC-01",
+      "element_type": "subcategory",
+      "identifier": "GV.OC-01",
+      "text": "GV.OC-01: The organizational mission is understood and informs cybersecurity risk management",
+      "parent_id": "csf-GV.OC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OC"
+      }
+    },
+    {
+      "id": "csf-GV.OC-02",
+      "element_type": "subcategory",
+      "identifier": "GV.OC-02",
+      "text": "GV.OC-02: Internal and external stakeholders are understood, and their needs and expectations regarding cybersecurity risk management are understood and considered",
+      "parent_id": "csf-GV.OC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OC"
+      }
+    },
+    {
+      "id": "csf-GV.OC-03",
+      "element_type": "subcategory",
+      "identifier": "GV.OC-03",
+      "text": "GV.OC-03: Legal, regulatory, and contractual requirements regarding cybersecurity - including privacy and civil liberties obligations - are understood and managed",
+      "parent_id": "csf-GV.OC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OC"
+      }
+    },
+    {
+      "id": "csf-GV.OC-04",
+      "element_type": "subcategory",
+      "identifier": "GV.OC-04",
+      "text": "GV.OC-04: Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated",
+      "parent_id": "csf-GV.OC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OC"
+      }
+    },
+    {
+      "id": "csf-GV.OC-05",
+      "element_type": "subcategory",
+      "identifier": "GV.OC-05",
+      "text": "GV.OC-05: Outcomes, capabilities, and services that the organization depends on are understood and communicated",
+      "parent_id": "csf-GV.OC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OC"
+      }
+    },
+    {
+      "id": "csf-GV.OV",
+      "element_type": "category",
+      "identifier": "GV.OV",
+      "text": "Oversight: Results of organization-wide cybersecurity risk management activities and performance are used to inform, improve, and adjust the risk management strategy",
+      "parent_id": "csf-GV",
+      "metadata": {
+        "level": "category",
+        "function": "GV"
+      }
+    },
+    {
+      "id": "csf-GV.OV-01",
+      "element_type": "subcategory",
+      "identifier": "GV.OV-01",
+      "text": "GV.OV-01: Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction",
+      "parent_id": "csf-GV.OV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OV"
+      }
+    },
+    {
+      "id": "csf-GV.OV-02",
+      "element_type": "subcategory",
+      "identifier": "GV.OV-02",
+      "text": "GV.OV-02: The cybersecurity risk management strategy is reviewed and adjusted to ensure coverage of organizational requirements and risks",
+      "parent_id": "csf-GV.OV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OV"
+      }
+    },
+    {
+      "id": "csf-GV.OV-03",
+      "element_type": "subcategory",
+      "identifier": "GV.OV-03",
+      "text": "GV.OV-03: Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed",
+      "parent_id": "csf-GV.OV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.OV"
+      }
+    },
+    {
+      "id": "csf-GV.PO",
+      "element_type": "category",
+      "identifier": "GV.PO",
+      "text": "Policy: Organizational cybersecurity policy is established, communicated, and enforced",
+      "parent_id": "csf-GV",
+      "metadata": {
+        "level": "category",
+        "function": "GV"
+      }
+    },
+    {
+      "id": "csf-GV.PO-01",
+      "element_type": "subcategory",
+      "identifier": "GV.PO-01",
+      "text": "GV.PO-01: Policy for managing cybersecurity risks is established based on organizational context, cybersecurity strategy, and priorities and is communicated and enforced",
+      "parent_id": "csf-GV.PO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.PO"
+      }
+    },
+    {
+      "id": "csf-GV.PO-02",
+      "element_type": "subcategory",
+      "identifier": "GV.PO-02",
+      "text": "GV.PO-02: Policy for managing cybersecurity risks is reviewed, updated, communicated, and enforced to reflect changes in requirements, threats, technology, and organizational mission",
+      "parent_id": "csf-GV.PO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.PO"
+      }
+    },
+    {
+      "id": "csf-GV.RM",
+      "element_type": "category",
+      "identifier": "GV.RM",
+      "text": "Risk Management Strategy: The organization's priorities, constraints, risk tolerance and appetite statements, and assumptions are established, communicated, and used to support operational risk decisions",
+      "parent_id": "csf-GV",
+      "metadata": {
+        "level": "category",
+        "function": "GV"
+      }
+    },
+    {
+      "id": "csf-GV.RM-01",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-01",
+      "text": "GV.RM-01: Risk management objectives are established and agreed to by organizational stakeholders",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RM-02",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-02",
+      "text": "GV.RM-02: Risk appetite and risk tolerance statements are established, communicated, and maintained",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RM-03",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-03",
+      "text": "GV.RM-03: Cybersecurity risk management activities and outcomes are included in enterprise risk management processes",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RM-04",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-04",
+      "text": "GV.RM-04: Strategic direction that describes appropriate risk response options is established and communicated",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RM-05",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-05",
+      "text": "GV.RM-05: Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RM-06",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-06",
+      "text": "GV.RM-06: A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RM-07",
+      "element_type": "subcategory",
+      "identifier": "GV.RM-07",
+      "text": "GV.RM-07: Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions",
+      "parent_id": "csf-GV.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RM"
+      }
+    },
+    {
+      "id": "csf-GV.RR",
+      "element_type": "category",
+      "identifier": "GV.RR",
+      "text": "Roles, Responsibilities, and Authorities: Cybersecurity roles, responsibilities, and authorities to foster accountability, performance assessment, and continuous improvement are established and communicated",
+      "parent_id": "csf-GV",
+      "metadata": {
+        "level": "category",
+        "function": "GV"
+      }
+    },
+    {
+      "id": "csf-GV.RR-01",
+      "element_type": "subcategory",
+      "identifier": "GV.RR-01",
+      "text": "GV.RR-01: Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving",
+      "parent_id": "csf-GV.RR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RR"
+      }
+    },
+    {
+      "id": "csf-GV.RR-02",
+      "element_type": "subcategory",
+      "identifier": "GV.RR-02",
+      "text": "GV.RR-02: Roles, responsibilities, and authorities related to cybersecurity risk management are established, communicated, understood, and enforced",
+      "parent_id": "csf-GV.RR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RR"
+      }
+    },
+    {
+      "id": "csf-GV.RR-03",
+      "element_type": "subcategory",
+      "identifier": "GV.RR-03",
+      "text": "GV.RR-03: Adequate resources are allocated commensurate with the cybersecurity risk strategy, roles, responsibilities, and policies",
+      "parent_id": "csf-GV.RR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RR"
+      }
+    },
+    {
+      "id": "csf-GV.RR-04",
+      "element_type": "subcategory",
+      "identifier": "GV.RR-04",
+      "text": "GV.RR-04: Cybersecurity is included in human resources practices",
+      "parent_id": "csf-GV.RR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.RR"
+      }
+    },
+    {
+      "id": "csf-GV.SC",
+      "element_type": "category",
+      "identifier": "GV.SC",
+      "text": "Cybersecurity Supply Chain Risk Management: Cyber supply chain risk management processes are identified, established, managed, monitored, and improved by organizational stakeholders",
+      "parent_id": "csf-GV",
+      "metadata": {
+        "level": "category",
+        "function": "GV"
+      }
+    },
+    {
+      "id": "csf-GV.SC-01",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-01",
+      "text": "GV.SC-01: A cybersecurity supply chain risk management program, strategy, objectives, policies, and processes are established and agreed to by organizational stakeholders",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-02",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-02",
+      "text": "GV.SC-02: Cybersecurity roles and responsibilities for suppliers, customers, and partners are established, communicated, and coordinated internally and externally",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-03",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-03",
+      "text": "GV.SC-03: Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-04",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-04",
+      "text": "GV.SC-04: Suppliers are known and prioritized by criticality",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-05",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-05",
+      "text": "GV.SC-05: Requirements to address cybersecurity risks in supply chains are established, prioritized, and integrated into contracts and other types of agreements with suppliers and other relevant third parties",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-06",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-06",
+      "text": "GV.SC-06: Planning and due diligence are performed to reduce risks before entering into formal supplier or other third-party relationships",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-07",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-07",
+      "text": "GV.SC-07: The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritized, assessed, responded to, and monitored over the course of the relationship",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-08",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-08",
+      "text": "GV.SC-08: Relevant suppliers and other third parties are included in incident planning, response, and recovery activities",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-09",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-09",
+      "text": "GV.SC-09: Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the technology product and service life cycle",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-GV.SC-10",
+      "element_type": "subcategory",
+      "identifier": "GV.SC-10",
+      "text": "GV.SC-10: Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement",
+      "parent_id": "csf-GV.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "GV",
+        "category": "GV.SC"
+      }
+    },
+    {
+      "id": "csf-ID",
+      "element_type": "function",
+      "identifier": "ID",
+      "text": "IDENTIFY. The organization's current cybersecurity risks are understood",
+      "parent_id": null,
+      "metadata": {
+        "level": "function"
+      }
+    },
+    {
+      "id": "csf-ID.AM",
+      "element_type": "category",
+      "identifier": "ID.AM",
+      "text": "Asset Management: Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.AM-01",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-01",
+      "text": "ID.AM-01: Inventories of hardware managed by the organization are maintained",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-02",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-02",
+      "text": "ID.AM-02: Inventories of software, services, and systems managed by the organization are maintained",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-03",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-03",
+      "text": "ID.AM-03: Representations of the organization's authorized network communication and internal and external network data flows are maintained",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-04",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-04",
+      "text": "ID.AM-04: Inventories of services provided by suppliers are maintained",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-05",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-05",
+      "text": "ID.AM-05: Assets are prioritized based on classification, criticality, resources, and impact on the mission",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-06",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-06",
+      "text": "ID.AM-06: Cybersecurity roles and responsibilities for the entire workforce and third-party stakeholders (e.g., suppliers, customers, partners) are established",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-07",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-07",
+      "text": "ID.AM-07: Inventories of data and corresponding metadata for designated data types are maintained",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.AM-08",
+      "element_type": "subcategory",
+      "identifier": "ID.AM-08",
+      "text": "ID.AM-08: Systems, hardware, software, services, and data are managed throughout their life cycles",
+      "parent_id": "csf-ID.AM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.AM"
+      }
+    },
+    {
+      "id": "csf-ID.BE",
+      "element_type": "category",
+      "identifier": "ID.BE",
+      "text": "Business Environment: Business Environment",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.BE-01",
+      "element_type": "subcategory",
+      "identifier": "ID.BE-01",
+      "text": "ID.BE-01: The organization\u2019s role in the supply chain is identified and communicated",
+      "parent_id": "csf-ID.BE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.BE"
+      }
+    },
+    {
+      "id": "csf-ID.BE-02",
+      "element_type": "subcategory",
+      "identifier": "ID.BE-02",
+      "text": "ID.BE-02: The organization\u2019s place in critical infrastructure and its industry sector is identified and communicated",
+      "parent_id": "csf-ID.BE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.BE"
+      }
+    },
+    {
+      "id": "csf-ID.BE-03",
+      "element_type": "subcategory",
+      "identifier": "ID.BE-03",
+      "text": "ID.BE-03: Priorities for organizational mission, objectives, and activities are established and communicated",
+      "parent_id": "csf-ID.BE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.BE"
+      }
+    },
+    {
+      "id": "csf-ID.BE-04",
+      "element_type": "subcategory",
+      "identifier": "ID.BE-04",
+      "text": "ID.BE-04: Dependencies and critical functions for delivery of critical services are established",
+      "parent_id": "csf-ID.BE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.BE"
+      }
+    },
+    {
+      "id": "csf-ID.BE-05",
+      "element_type": "subcategory",
+      "identifier": "ID.BE-05",
+      "text": "ID.BE-05: Resilience requirements to support delivery of critical services are established for all operating states (e.g. under duress/attack, during recovery, normal operations)",
+      "parent_id": "csf-ID.BE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.BE"
+      }
+    },
+    {
+      "id": "csf-ID.GV",
+      "element_type": "category",
+      "identifier": "ID.GV",
+      "text": "Governance: Governance",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.GV-01",
+      "element_type": "subcategory",
+      "identifier": "ID.GV-01",
+      "text": "ID.GV-01: Organizational cybersecurity policy is established and communicated",
+      "parent_id": "csf-ID.GV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.GV"
+      }
+    },
+    {
+      "id": "csf-ID.GV-02",
+      "element_type": "subcategory",
+      "identifier": "ID.GV-02",
+      "text": "ID.GV-02: Cybersecurity roles and responsibilities are coordinated and aligned with internal roles and external partners",
+      "parent_id": "csf-ID.GV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.GV"
+      }
+    },
+    {
+      "id": "csf-ID.GV-03",
+      "element_type": "subcategory",
+      "identifier": "ID.GV-03",
+      "text": "ID.GV-03: Legal and regulatory requirements regarding cybersecurity, including privacy and civil liberties obligations, are understood and managed",
+      "parent_id": "csf-ID.GV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.GV"
+      }
+    },
+    {
+      "id": "csf-ID.GV-04",
+      "element_type": "subcategory",
+      "identifier": "ID.GV-04",
+      "text": "ID.GV-04: Governance and risk management processes address cybersecurity risks",
+      "parent_id": "csf-ID.GV",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.GV"
+      }
+    },
+    {
+      "id": "csf-ID.IM",
+      "element_type": "category",
+      "identifier": "ID.IM",
+      "text": "Improvement: Improvements to organizational cybersecurity risk management processes, procedures and activities are identified across all CSF Functions",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.IM-01",
+      "element_type": "subcategory",
+      "identifier": "ID.IM-01",
+      "text": "ID.IM-01: Improvements are identified from evaluations",
+      "parent_id": "csf-ID.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.IM"
+      }
+    },
+    {
+      "id": "csf-ID.IM-02",
+      "element_type": "subcategory",
+      "identifier": "ID.IM-02",
+      "text": "ID.IM-02: Improvements are identified from security tests and exercises, including those done in coordination with suppliers and relevant third parties",
+      "parent_id": "csf-ID.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.IM"
+      }
+    },
+    {
+      "id": "csf-ID.IM-03",
+      "element_type": "subcategory",
+      "identifier": "ID.IM-03",
+      "text": "ID.IM-03: Improvements are identified from execution of operational processes, procedures, and activities",
+      "parent_id": "csf-ID.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.IM"
+      }
+    },
+    {
+      "id": "csf-ID.IM-04",
+      "element_type": "subcategory",
+      "identifier": "ID.IM-04",
+      "text": "ID.IM-04: Incident response plans and other cybersecurity plans that affect operations are established, communicated, maintained, and improved",
+      "parent_id": "csf-ID.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.IM"
+      }
+    },
+    {
+      "id": "csf-ID.RA",
+      "element_type": "category",
+      "identifier": "ID.RA",
+      "text": "Risk Assessment: The cybersecurity risk to the organization, assets, and individuals is understood by the organization",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.RA-01",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-01",
+      "text": "ID.RA-01: Vulnerabilities in assets are identified, validated, and recorded",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-02",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-02",
+      "text": "ID.RA-02: Cyber threat intelligence is received from information sharing forums and sources",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-03",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-03",
+      "text": "ID.RA-03: Internal and external threats to the organization are identified and recorded",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-04",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-04",
+      "text": "ID.RA-04: Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-05",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-05",
+      "text": "ID.RA-05: Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-06",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-06",
+      "text": "ID.RA-06: Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-07",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-07",
+      "text": "ID.RA-07: Changes and exceptions are managed, assessed for risk impact, recorded, and tracked",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-08",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-08",
+      "text": "ID.RA-08: Processes for receiving, analyzing, and responding to vulnerability disclosures are established",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-09",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-09",
+      "text": "ID.RA-09: The authenticity and integrity of hardware and software are assessed prior to acquisition and use",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RA-10",
+      "element_type": "subcategory",
+      "identifier": "ID.RA-10",
+      "text": "ID.RA-10: Critical suppliers are assessed prior to acquisition",
+      "parent_id": "csf-ID.RA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RA"
+      }
+    },
+    {
+      "id": "csf-ID.RM",
+      "element_type": "category",
+      "identifier": "ID.RM",
+      "text": "Risk Management Strategy: Risk Management Strategy",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.RM-01",
+      "element_type": "subcategory",
+      "identifier": "ID.RM-01",
+      "text": "ID.RM-01: Risk management processes are established, managed, and agreed to by organizational stakeholders",
+      "parent_id": "csf-ID.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RM"
+      }
+    },
+    {
+      "id": "csf-ID.RM-02",
+      "element_type": "subcategory",
+      "identifier": "ID.RM-02",
+      "text": "ID.RM-02: Organizational risk tolerance is determined and clearly expressed",
+      "parent_id": "csf-ID.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RM"
+      }
+    },
+    {
+      "id": "csf-ID.RM-03",
+      "element_type": "subcategory",
+      "identifier": "ID.RM-03",
+      "text": "ID.RM-03: The organization\u2019s determination of risk tolerance is informed by its role in critical infrastructure and sector specific risk analysis",
+      "parent_id": "csf-ID.RM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.RM"
+      }
+    },
+    {
+      "id": "csf-ID.SC",
+      "element_type": "category",
+      "identifier": "ID.SC",
+      "text": "Supply Chain Risk Management: Supply Chain Risk Management",
+      "parent_id": "csf-ID",
+      "metadata": {
+        "level": "category",
+        "function": "ID"
+      }
+    },
+    {
+      "id": "csf-ID.SC-01",
+      "element_type": "subcategory",
+      "identifier": "ID.SC-01",
+      "text": "ID.SC-01: Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders",
+      "parent_id": "csf-ID.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.SC"
+      }
+    },
+    {
+      "id": "csf-ID.SC-02",
+      "element_type": "subcategory",
+      "identifier": "ID.SC-02",
+      "text": "ID.SC-02: Suppliers and third party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process",
+      "parent_id": "csf-ID.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.SC"
+      }
+    },
+    {
+      "id": "csf-ID.SC-03",
+      "element_type": "subcategory",
+      "identifier": "ID.SC-03",
+      "text": "ID.SC-03: Contracts with suppliers and third-party partners are used to implement appropriate measures designed to meet the objectives of an organization\u2019s cybersecurity program and Cyber Supply Chain Risk Management Plan.",
+      "parent_id": "csf-ID.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.SC"
+      }
+    },
+    {
+      "id": "csf-ID.SC-04",
+      "element_type": "subcategory",
+      "identifier": "ID.SC-04",
+      "text": "ID.SC-04: Suppliers and third-party partners are routinely assessed using audits, test results, or other forms of evaluations to confirm they are meeting their contractual obligations.",
+      "parent_id": "csf-ID.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.SC"
+      }
+    },
+    {
+      "id": "csf-ID.SC-05",
+      "element_type": "subcategory",
+      "identifier": "ID.SC-05",
+      "text": "ID.SC-05: Response and recovery planning and testing are conducted with suppliers and third-party providers",
+      "parent_id": "csf-ID.SC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "ID",
+        "category": "ID.SC"
+      }
+    },
+    {
+      "id": "csf-PR",
+      "element_type": "function",
+      "identifier": "PR",
+      "text": "PROTECT. Safeguards to manage the organization's cybersecurity risks are used",
+      "parent_id": null,
+      "metadata": {
+        "level": "function"
+      }
+    },
+    {
+      "id": "csf-PR.AA",
+      "element_type": "category",
+      "identifier": "PR.AA",
+      "text": "Identity Management, Authentication, and Access Control: Access to physical and logical assets is limited to authorized users, services, and hardware and managed commensurate with the assessed risk of unauthorized access",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.AA-01",
+      "element_type": "subcategory",
+      "identifier": "PR.AA-01",
+      "text": "PR.AA-01: Identities and credentials for authorized users, services, and hardware are managed by the organization",
+      "parent_id": "csf-PR.AA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AA"
+      }
+    },
+    {
+      "id": "csf-PR.AA-02",
+      "element_type": "subcategory",
+      "identifier": "PR.AA-02",
+      "text": "PR.AA-02: Identities are proofed and bound to credentials based on the context of interactions",
+      "parent_id": "csf-PR.AA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AA"
+      }
+    },
+    {
+      "id": "csf-PR.AA-03",
+      "element_type": "subcategory",
+      "identifier": "PR.AA-03",
+      "text": "PR.AA-03: Users, services, and hardware are authenticated",
+      "parent_id": "csf-PR.AA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AA"
+      }
+    },
+    {
+      "id": "csf-PR.AA-04",
+      "element_type": "subcategory",
+      "identifier": "PR.AA-04",
+      "text": "PR.AA-04: Identity assertions are protected, conveyed, and verified",
+      "parent_id": "csf-PR.AA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AA"
+      }
+    },
+    {
+      "id": "csf-PR.AA-05",
+      "element_type": "subcategory",
+      "identifier": "PR.AA-05",
+      "text": "PR.AA-05: Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties",
+      "parent_id": "csf-PR.AA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AA"
+      }
+    },
+    {
+      "id": "csf-PR.AA-06",
+      "element_type": "subcategory",
+      "identifier": "PR.AA-06",
+      "text": "PR.AA-06: Physical access to assets is managed, monitored, and enforced commensurate with risk",
+      "parent_id": "csf-PR.AA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AA"
+      }
+    },
+    {
+      "id": "csf-PR.AC",
+      "element_type": "category",
+      "identifier": "PR.AC",
+      "text": "Identity Management, Authentication and Access Control: Identity Management, Authentication and Access Control",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.AC-01",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-01",
+      "text": "PR.AC-01: Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users and processes",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AC-02",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-02",
+      "text": "PR.AC-02: Physical access to assets is managed and protected",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AC-03",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-03",
+      "text": "PR.AC-03: Remote access is managed",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AC-04",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-04",
+      "text": "PR.AC-04: Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AC-05",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-05",
+      "text": "PR.AC-05: Network integrity is protected (e.g., network segregation, network segmentation)",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AC-06",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-06",
+      "text": "PR.AC-06: Identities are proofed and bound to credentials and asserted in interactions",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AC-07",
+      "element_type": "subcategory",
+      "identifier": "PR.AC-07",
+      "text": "PR.AC-07: Users, devices, and other assets are authenticated (e.g., single-factor, multi-factor) commensurate with the risk of the transaction (e.g., individuals\u2019 security and privacy risks and other organizational risks)",
+      "parent_id": "csf-PR.AC",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AC"
+      }
+    },
+    {
+      "id": "csf-PR.AT",
+      "element_type": "category",
+      "identifier": "PR.AT",
+      "text": "Awareness and Training: The organization's personnel are provided with cybersecurity awareness and training so that they can perform their cybersecurity-related tasks",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.AT-01",
+      "element_type": "subcategory",
+      "identifier": "PR.AT-01",
+      "text": "PR.AT-01: Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind",
+      "parent_id": "csf-PR.AT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AT"
+      }
+    },
+    {
+      "id": "csf-PR.AT-02",
+      "element_type": "subcategory",
+      "identifier": "PR.AT-02",
+      "text": "PR.AT-02: Individuals in specialized roles are provided with awareness and training so that they possess the knowledge and skills to perform relevant tasks with cybersecurity risks in mind",
+      "parent_id": "csf-PR.AT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AT"
+      }
+    },
+    {
+      "id": "csf-PR.AT-03",
+      "element_type": "subcategory",
+      "identifier": "PR.AT-03",
+      "text": "PR.AT-03: Third-party stakeholders (e.g., suppliers, customers, partners) understand their roles and responsibilities",
+      "parent_id": "csf-PR.AT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AT"
+      }
+    },
+    {
+      "id": "csf-PR.AT-04",
+      "element_type": "subcategory",
+      "identifier": "PR.AT-04",
+      "text": "PR.AT-04: Senior executives understand their roles and responsibilities",
+      "parent_id": "csf-PR.AT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AT"
+      }
+    },
+    {
+      "id": "csf-PR.AT-05",
+      "element_type": "subcategory",
+      "identifier": "PR.AT-05",
+      "text": "PR.AT-05: Physical and cybersecurity personnel understand their roles and responsibilities",
+      "parent_id": "csf-PR.AT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.AT"
+      }
+    },
+    {
+      "id": "csf-PR.DS",
+      "element_type": "category",
+      "identifier": "PR.DS",
+      "text": "Data Security: Data are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.DS-01",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-01",
+      "text": "PR.DS-01: The confidentiality, integrity, and availability of data-at-rest are protected",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-02",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-02",
+      "text": "PR.DS-02: The confidentiality, integrity, and availability of data-in-transit are protected",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-03",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-03",
+      "text": "PR.DS-03: Assets are formally managed throughout removal, transfers, and disposition",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-04",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-04",
+      "text": "PR.DS-04: Adequate capacity to ensure availability is maintained",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-05",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-05",
+      "text": "PR.DS-05: Protections against data leaks are implemented",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-06",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-06",
+      "text": "PR.DS-06: Integrity checking mechanisms are used to verify software, firmware, and information integrity",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-07",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-07",
+      "text": "PR.DS-07: The development and testing environment(s) are separate from the production environment",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-08",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-08",
+      "text": "PR.DS-08: Integrity checking mechanisms are used to verify hardware integrity",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-10",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-10",
+      "text": "PR.DS-10: The confidentiality, integrity, and availability of data-in-use are protected",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.DS-11",
+      "element_type": "subcategory",
+      "identifier": "PR.DS-11",
+      "text": "PR.DS-11: Backups of data are created, protected, maintained, and tested",
+      "parent_id": "csf-PR.DS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.DS"
+      }
+    },
+    {
+      "id": "csf-PR.IP",
+      "element_type": "category",
+      "identifier": "PR.IP",
+      "text": "Information Protection Processes and Procedures: Information Protection Processes and Procedures",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.IP-01",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-01",
+      "text": "PR.IP-01: A baseline configuration of information technology/industrial control systems is created and maintained incorporating security principles (e.g. concept of least functionality)",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-02",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-02",
+      "text": "PR.IP-02: A System Development Life Cycle to manage systems is implemented",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-03",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-03",
+      "text": "PR.IP-03: Configuration change control processes are in place",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-04",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-04",
+      "text": "PR.IP-04: Backups of information are conducted, maintained, and tested",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-05",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-05",
+      "text": "PR.IP-05: Policy and regulations regarding the physical operating environment for organizational assets are met",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-06",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-06",
+      "text": "PR.IP-06: Data is destroyed according to policy",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-07",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-07",
+      "text": "PR.IP-07: Protection processes are improved",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-08",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-08",
+      "text": "PR.IP-08: Effectiveness of protection technologies is shared",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-09",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-09",
+      "text": "PR.IP-09: Response plans (Incident Response and Business Continuity) and recovery plans (Incident Recovery and Disaster Recovery) are in place and managed",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-10",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-10",
+      "text": "PR.IP-10: Response and recovery plans are tested",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-11",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-11",
+      "text": "PR.IP-11: Cybersecurity is included in human resources practices (e.g., deprovisioning, personnel screening)",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IP-12",
+      "element_type": "subcategory",
+      "identifier": "PR.IP-12",
+      "text": "PR.IP-12: A vulnerability management plan is developed and implemented",
+      "parent_id": "csf-PR.IP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IP"
+      }
+    },
+    {
+      "id": "csf-PR.IR",
+      "element_type": "category",
+      "identifier": "PR.IR",
+      "text": "Technology Infrastructure Resilience: Security architectures are managed with the organization's risk strategy to protect asset confidentiality, integrity, and availability, and organizational resilience",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.IR-01",
+      "element_type": "subcategory",
+      "identifier": "PR.IR-01",
+      "text": "PR.IR-01: Networks and environments are protected from unauthorized logical access and usage",
+      "parent_id": "csf-PR.IR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IR"
+      }
+    },
+    {
+      "id": "csf-PR.IR-02",
+      "element_type": "subcategory",
+      "identifier": "PR.IR-02",
+      "text": "PR.IR-02: The organization's technology assets are protected from environmental threats",
+      "parent_id": "csf-PR.IR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IR"
+      }
+    },
+    {
+      "id": "csf-PR.IR-03",
+      "element_type": "subcategory",
+      "identifier": "PR.IR-03",
+      "text": "PR.IR-03: Mechanisms are implemented to achieve resilience requirements in normal and adverse situations",
+      "parent_id": "csf-PR.IR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IR"
+      }
+    },
+    {
+      "id": "csf-PR.IR-04",
+      "element_type": "subcategory",
+      "identifier": "PR.IR-04",
+      "text": "PR.IR-04: Adequate resource capacity to ensure availability is maintained",
+      "parent_id": "csf-PR.IR",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.IR"
+      }
+    },
+    {
+      "id": "csf-PR.MA",
+      "element_type": "category",
+      "identifier": "PR.MA",
+      "text": "Maintenance: Maintenance",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.MA-01",
+      "element_type": "subcategory",
+      "identifier": "PR.MA-01",
+      "text": "PR.MA-01: Maintenance and repair of organizational assets are performed and logged, with approved and controlled tools",
+      "parent_id": "csf-PR.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.MA"
+      }
+    },
+    {
+      "id": "csf-PR.MA-02",
+      "element_type": "subcategory",
+      "identifier": "PR.MA-02",
+      "text": "PR.MA-02: Remote maintenance of organizational assets is approved, logged, and performed in a manner that prevents unauthorized access",
+      "parent_id": "csf-PR.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.MA"
+      }
+    },
+    {
+      "id": "csf-PR.PS",
+      "element_type": "category",
+      "identifier": "PR.PS",
+      "text": "Platform Security: The hardware, software (e.g., firmware, operating systems, applications), and services of physical and virtual platforms are managed consistent with the organization's risk strategy to protect their confidentiality, integrity, and availability",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.PS-01",
+      "element_type": "subcategory",
+      "identifier": "PR.PS-01",
+      "text": "PR.PS-01: Configuration management practices are established and applied",
+      "parent_id": "csf-PR.PS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PS"
+      }
+    },
+    {
+      "id": "csf-PR.PS-02",
+      "element_type": "subcategory",
+      "identifier": "PR.PS-02",
+      "text": "PR.PS-02: Software is maintained, replaced, and removed commensurate with risk",
+      "parent_id": "csf-PR.PS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PS"
+      }
+    },
+    {
+      "id": "csf-PR.PS-03",
+      "element_type": "subcategory",
+      "identifier": "PR.PS-03",
+      "text": "PR.PS-03: Hardware is maintained, replaced, and removed commensurate with risk",
+      "parent_id": "csf-PR.PS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PS"
+      }
+    },
+    {
+      "id": "csf-PR.PS-04",
+      "element_type": "subcategory",
+      "identifier": "PR.PS-04",
+      "text": "PR.PS-04: Log records are generated and made available for continuous monitoring",
+      "parent_id": "csf-PR.PS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PS"
+      }
+    },
+    {
+      "id": "csf-PR.PS-05",
+      "element_type": "subcategory",
+      "identifier": "PR.PS-05",
+      "text": "PR.PS-05: Installation and execution of unauthorized software are prevented",
+      "parent_id": "csf-PR.PS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PS"
+      }
+    },
+    {
+      "id": "csf-PR.PS-06",
+      "element_type": "subcategory",
+      "identifier": "PR.PS-06",
+      "text": "PR.PS-06: Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle",
+      "parent_id": "csf-PR.PS",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PS"
+      }
+    },
+    {
+      "id": "csf-PR.PT",
+      "element_type": "category",
+      "identifier": "PR.PT",
+      "text": "Protective Technology: Protective Technology",
+      "parent_id": "csf-PR",
+      "metadata": {
+        "level": "category",
+        "function": "PR"
+      }
+    },
+    {
+      "id": "csf-PR.PT-01",
+      "element_type": "subcategory",
+      "identifier": "PR.PT-01",
+      "text": "PR.PT-01: Audit/log records are determined, documented, implemented, and reviewed in accordance with policy",
+      "parent_id": "csf-PR.PT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PT"
+      }
+    },
+    {
+      "id": "csf-PR.PT-02",
+      "element_type": "subcategory",
+      "identifier": "PR.PT-02",
+      "text": "PR.PT-02: Removable media is protected and its use restricted according to policy",
+      "parent_id": "csf-PR.PT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PT"
+      }
+    },
+    {
+      "id": "csf-PR.PT-03",
+      "element_type": "subcategory",
+      "identifier": "PR.PT-03",
+      "text": "PR.PT-03: The principle of least functionality is incorporated by configuring systems to provide only essential capabilities",
+      "parent_id": "csf-PR.PT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PT"
+      }
+    },
+    {
+      "id": "csf-PR.PT-04",
+      "element_type": "subcategory",
+      "identifier": "PR.PT-04",
+      "text": "PR.PT-04: Communications and control networks are protected",
+      "parent_id": "csf-PR.PT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PT"
+      }
+    },
+    {
+      "id": "csf-PR.PT-05",
+      "element_type": "subcategory",
+      "identifier": "PR.PT-05",
+      "text": "PR.PT-05: Mechanisms (e.g., failsafe, load balancing, hot swap) are implemented to achieve resilience requirements in normal and adverse situations",
+      "parent_id": "csf-PR.PT",
+      "metadata": {
+        "level": "subcategory",
+        "function": "PR",
+        "category": "PR.PT"
+      }
+    },
+    {
+      "id": "csf-DE",
+      "element_type": "function",
+      "identifier": "DE",
+      "text": "DETECT. Possible cybersecurity attacks and compromises are found and analyzed",
+      "parent_id": null,
+      "metadata": {
+        "level": "function"
+      }
+    },
+    {
+      "id": "csf-DE.AE",
+      "element_type": "category",
+      "identifier": "DE.AE",
+      "text": "Adverse Event Analysis: Anomalies, indicators of compromise, and other potentially adverse events are analyzed to characterize the events and detect cybersecurity incidents",
+      "parent_id": "csf-DE",
+      "metadata": {
+        "level": "category",
+        "function": "DE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-01",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-01",
+      "text": "DE.AE-01: A baseline of network operations and expected data flows for users and systems is established and managed",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-02",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-02",
+      "text": "DE.AE-02: Potentially adverse events are analyzed to better understand associated activities",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-03",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-03",
+      "text": "DE.AE-03: Information is correlated from multiple sources",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-04",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-04",
+      "text": "DE.AE-04: The estimated impact and scope of adverse events are understood",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-05",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-05",
+      "text": "DE.AE-05: Incident alert thresholds are established",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-06",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-06",
+      "text": "DE.AE-06: Information on adverse events is provided to authorized staff and tools",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-07",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-07",
+      "text": "DE.AE-07: Cyber threat intelligence and other contextual information are integrated into the analysis",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.AE-08",
+      "element_type": "subcategory",
+      "identifier": "DE.AE-08",
+      "text": "DE.AE-08: Incidents are declared when adverse events meet the defined incident criteria",
+      "parent_id": "csf-DE.AE",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.AE"
+      }
+    },
+    {
+      "id": "csf-DE.CM",
+      "element_type": "category",
+      "identifier": "DE.CM",
+      "text": "Continuous Monitoring: Assets are monitored to find anomalies, indicators of compromise, and other potentially adverse events",
+      "parent_id": "csf-DE",
+      "metadata": {
+        "level": "category",
+        "function": "DE"
+      }
+    },
+    {
+      "id": "csf-DE.CM-01",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-01",
+      "text": "DE.CM-01: Networks and network services are monitored to find potentially adverse events",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-02",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-02",
+      "text": "DE.CM-02: The physical environment is monitored to find potentially adverse events",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-03",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-03",
+      "text": "DE.CM-03: Personnel activity and technology usage are monitored to find potentially adverse events",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-04",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-04",
+      "text": "DE.CM-04: Malicious code is detected",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-05",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-05",
+      "text": "DE.CM-05: Unauthorized mobile code is detected",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-06",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-06",
+      "text": "DE.CM-06: External service provider activities and services are monitored to find potentially adverse events",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-07",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-07",
+      "text": "DE.CM-07: Monitoring for unauthorized personnel, connections, devices, and software is performed",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-08",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-08",
+      "text": "DE.CM-08: Vulnerability scans are performed",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.CM-09",
+      "element_type": "subcategory",
+      "identifier": "DE.CM-09",
+      "text": "DE.CM-09: Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events",
+      "parent_id": "csf-DE.CM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.CM"
+      }
+    },
+    {
+      "id": "csf-DE.DP",
+      "element_type": "category",
+      "identifier": "DE.DP",
+      "text": "Detection Processes: Detection Processes",
+      "parent_id": "csf-DE",
+      "metadata": {
+        "level": "category",
+        "function": "DE"
+      }
+    },
+    {
+      "id": "csf-DE.DP-01",
+      "element_type": "subcategory",
+      "identifier": "DE.DP-01",
+      "text": "DE.DP-01: Roles and responsibilities for detection are well defined to ensure accountability",
+      "parent_id": "csf-DE.DP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.DP"
+      }
+    },
+    {
+      "id": "csf-DE.DP-02",
+      "element_type": "subcategory",
+      "identifier": "DE.DP-02",
+      "text": "DE.DP-02: Detection activities comply with all applicable requirements",
+      "parent_id": "csf-DE.DP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.DP"
+      }
+    },
+    {
+      "id": "csf-DE.DP-03",
+      "element_type": "subcategory",
+      "identifier": "DE.DP-03",
+      "text": "DE.DP-03: Detection processes are tested",
+      "parent_id": "csf-DE.DP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.DP"
+      }
+    },
+    {
+      "id": "csf-DE.DP-04",
+      "element_type": "subcategory",
+      "identifier": "DE.DP-04",
+      "text": "DE.DP-04: Event detection information is communicated",
+      "parent_id": "csf-DE.DP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.DP"
+      }
+    },
+    {
+      "id": "csf-DE.DP-05",
+      "element_type": "subcategory",
+      "identifier": "DE.DP-05",
+      "text": "DE.DP-05: Detection processes are continuously improved",
+      "parent_id": "csf-DE.DP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "DE",
+        "category": "DE.DP"
+      }
+    },
+    {
+      "id": "csf-RS",
+      "element_type": "function",
+      "identifier": "RS",
+      "text": "RESPOND. Actions regarding a detected cybersecurity incident are taken",
+      "parent_id": null,
+      "metadata": {
+        "level": "function"
+      }
+    },
+    {
+      "id": "csf-RS.AN",
+      "element_type": "category",
+      "identifier": "RS.AN",
+      "text": "Incident Analysis: Investigations are conducted to ensure effective response and support forensics and recovery activities",
+      "parent_id": "csf-RS",
+      "metadata": {
+        "level": "category",
+        "function": "RS"
+      }
+    },
+    {
+      "id": "csf-RS.AN-01",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-01",
+      "text": "RS.AN-01: Notifications from detection systems are investigated",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-02",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-02",
+      "text": "RS.AN-02: The impact of the incident is understood",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-03",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-03",
+      "text": "RS.AN-03: Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-04",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-04",
+      "text": "RS.AN-04: Incidents are categorized consistent with response plans",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-05",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-05",
+      "text": "RS.AN-05: Processes are established to receive, analyze and respond to vulnerabilities disclosed to the organization from internal and external sources (e.g. internal testing, security bulletins, or security researchers)",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-06",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-06",
+      "text": "RS.AN-06: Actions performed during an investigation are recorded, and the records' integrity and provenance are preserved",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-07",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-07",
+      "text": "RS.AN-07: Incident data and metadata are collected, and their integrity and provenance are preserved",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.AN-08",
+      "element_type": "subcategory",
+      "identifier": "RS.AN-08",
+      "text": "RS.AN-08: An incident's magnitude is estimated and validated",
+      "parent_id": "csf-RS.AN",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.AN"
+      }
+    },
+    {
+      "id": "csf-RS.CO",
+      "element_type": "category",
+      "identifier": "RS.CO",
+      "text": "Incident Response Reporting and Communication: Response activities are coordinated with internal and external stakeholders as required by laws, regulations, or policies",
+      "parent_id": "csf-RS",
+      "metadata": {
+        "level": "category",
+        "function": "RS"
+      }
+    },
+    {
+      "id": "csf-RS.CO-01",
+      "element_type": "subcategory",
+      "identifier": "RS.CO-01",
+      "text": "RS.CO-01: Personnel know their roles and order of operations when a response is needed",
+      "parent_id": "csf-RS.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.CO"
+      }
+    },
+    {
+      "id": "csf-RS.CO-02",
+      "element_type": "subcategory",
+      "identifier": "RS.CO-02",
+      "text": "RS.CO-02: Internal and external stakeholders are notified of incidents",
+      "parent_id": "csf-RS.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.CO"
+      }
+    },
+    {
+      "id": "csf-RS.CO-03",
+      "element_type": "subcategory",
+      "identifier": "RS.CO-03",
+      "text": "RS.CO-03: Information is shared with designated internal and external stakeholders",
+      "parent_id": "csf-RS.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.CO"
+      }
+    },
+    {
+      "id": "csf-RS.CO-04",
+      "element_type": "subcategory",
+      "identifier": "RS.CO-04",
+      "text": "RS.CO-04: Coordination with stakeholders occurs consistent with response plans",
+      "parent_id": "csf-RS.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.CO"
+      }
+    },
+    {
+      "id": "csf-RS.CO-05",
+      "element_type": "subcategory",
+      "identifier": "RS.CO-05",
+      "text": "RS.CO-05: Voluntary information sharing occurs with external stakeholders to achieve broader cybersecurity situational awareness",
+      "parent_id": "csf-RS.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.CO"
+      }
+    },
+    {
+      "id": "csf-RS.IM",
+      "element_type": "category",
+      "identifier": "RS.IM",
+      "text": "Improvements: Improvements",
+      "parent_id": "csf-RS",
+      "metadata": {
+        "level": "category",
+        "function": "RS"
+      }
+    },
+    {
+      "id": "csf-RS.IM-01",
+      "element_type": "subcategory",
+      "identifier": "RS.IM-01",
+      "text": "RS.IM-01: Response plans incorporate lessons learned",
+      "parent_id": "csf-RS.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.IM"
+      }
+    },
+    {
+      "id": "csf-RS.IM-02",
+      "element_type": "subcategory",
+      "identifier": "RS.IM-02",
+      "text": "RS.IM-02: Response strategies are updated",
+      "parent_id": "csf-RS.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.IM"
+      }
+    },
+    {
+      "id": "csf-RS.MA",
+      "element_type": "category",
+      "identifier": "RS.MA",
+      "text": "Incident Management: Responses to detected cybersecurity incidents are managed",
+      "parent_id": "csf-RS",
+      "metadata": {
+        "level": "category",
+        "function": "RS"
+      }
+    },
+    {
+      "id": "csf-RS.MA-01",
+      "element_type": "subcategory",
+      "identifier": "RS.MA-01",
+      "text": "RS.MA-01: The incident response plan is executed in coordination with relevant third parties once an incident is declared",
+      "parent_id": "csf-RS.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MA"
+      }
+    },
+    {
+      "id": "csf-RS.MA-02",
+      "element_type": "subcategory",
+      "identifier": "RS.MA-02",
+      "text": "RS.MA-02: Incident reports are triaged and validated",
+      "parent_id": "csf-RS.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MA"
+      }
+    },
+    {
+      "id": "csf-RS.MA-03",
+      "element_type": "subcategory",
+      "identifier": "RS.MA-03",
+      "text": "RS.MA-03: Incidents are categorized and prioritized",
+      "parent_id": "csf-RS.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MA"
+      }
+    },
+    {
+      "id": "csf-RS.MA-04",
+      "element_type": "subcategory",
+      "identifier": "RS.MA-04",
+      "text": "RS.MA-04: Incidents are escalated or elevated as needed",
+      "parent_id": "csf-RS.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MA"
+      }
+    },
+    {
+      "id": "csf-RS.MA-05",
+      "element_type": "subcategory",
+      "identifier": "RS.MA-05",
+      "text": "RS.MA-05: The criteria for initiating incident recovery are applied",
+      "parent_id": "csf-RS.MA",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MA"
+      }
+    },
+    {
+      "id": "csf-RS.MI",
+      "element_type": "category",
+      "identifier": "RS.MI",
+      "text": "Incident Mitigation: Activities are performed to prevent expansion of an event and mitigate its effects",
+      "parent_id": "csf-RS",
+      "metadata": {
+        "level": "category",
+        "function": "RS"
+      }
+    },
+    {
+      "id": "csf-RS.MI-01",
+      "element_type": "subcategory",
+      "identifier": "RS.MI-01",
+      "text": "RS.MI-01: Incidents are contained",
+      "parent_id": "csf-RS.MI",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MI"
+      }
+    },
+    {
+      "id": "csf-RS.MI-02",
+      "element_type": "subcategory",
+      "identifier": "RS.MI-02",
+      "text": "RS.MI-02: Incidents are eradicated",
+      "parent_id": "csf-RS.MI",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MI"
+      }
+    },
+    {
+      "id": "csf-RS.MI-03",
+      "element_type": "subcategory",
+      "identifier": "RS.MI-03",
+      "text": "RS.MI-03: Newly identified vulnerabilities are mitigated or documented as accepted risks",
+      "parent_id": "csf-RS.MI",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.MI"
+      }
+    },
+    {
+      "id": "csf-RS.RP",
+      "element_type": "category",
+      "identifier": "RS.RP",
+      "text": "Response Planning: Response Planning",
+      "parent_id": "csf-RS",
+      "metadata": {
+        "level": "category",
+        "function": "RS"
+      }
+    },
+    {
+      "id": "csf-RS.RP-01",
+      "element_type": "subcategory",
+      "identifier": "RS.RP-01",
+      "text": "RS.RP-01: Response plan is executed during or after an incident",
+      "parent_id": "csf-RS.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RS",
+        "category": "RS.RP"
+      }
+    },
+    {
+      "id": "csf-RC",
+      "element_type": "function",
+      "identifier": "RC",
+      "text": "RECOVER. Assets and operations affected by a cybersecurity incident are restored",
+      "parent_id": null,
+      "metadata": {
+        "level": "function"
+      }
+    },
+    {
+      "id": "csf-RC.CO",
+      "element_type": "category",
+      "identifier": "RC.CO",
+      "text": "Incident Recovery Communication: Restoration activities are coordinated with internal and external parties",
+      "parent_id": "csf-RC",
+      "metadata": {
+        "level": "category",
+        "function": "RC"
+      }
+    },
+    {
+      "id": "csf-RC.CO-01",
+      "element_type": "subcategory",
+      "identifier": "RC.CO-01",
+      "text": "RC.CO-01: Public relations are managed",
+      "parent_id": "csf-RC.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.CO"
+      }
+    },
+    {
+      "id": "csf-RC.CO-02",
+      "element_type": "subcategory",
+      "identifier": "RC.CO-02",
+      "text": "RC.CO-02: Reputation is repaired after an incident",
+      "parent_id": "csf-RC.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.CO"
+      }
+    },
+    {
+      "id": "csf-RC.CO-03",
+      "element_type": "subcategory",
+      "identifier": "RC.CO-03",
+      "text": "RC.CO-03: Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders",
+      "parent_id": "csf-RC.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.CO"
+      }
+    },
+    {
+      "id": "csf-RC.CO-04",
+      "element_type": "subcategory",
+      "identifier": "RC.CO-04",
+      "text": "RC.CO-04: Public updates on incident recovery are shared using approved methods and messaging",
+      "parent_id": "csf-RC.CO",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.CO"
+      }
+    },
+    {
+      "id": "csf-RC.IM",
+      "element_type": "category",
+      "identifier": "RC.IM",
+      "text": "Improvements: Improvements",
+      "parent_id": "csf-RC",
+      "metadata": {
+        "level": "category",
+        "function": "RC"
+      }
+    },
+    {
+      "id": "csf-RC.IM-01",
+      "element_type": "subcategory",
+      "identifier": "RC.IM-01",
+      "text": "RC.IM-01: Recovery plans incorporate lessons learned",
+      "parent_id": "csf-RC.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.IM"
+      }
+    },
+    {
+      "id": "csf-RC.IM-02",
+      "element_type": "subcategory",
+      "identifier": "RC.IM-02",
+      "text": "RC.IM-02: Recovery strategies are updated",
+      "parent_id": "csf-RC.IM",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.IM"
+      }
+    },
+    {
+      "id": "csf-RC.RP",
+      "element_type": "category",
+      "identifier": "RC.RP",
+      "text": "Incident Recovery Plan Execution: Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents",
+      "parent_id": "csf-RC",
+      "metadata": {
+        "level": "category",
+        "function": "RC"
+      }
+    },
+    {
+      "id": "csf-RC.RP-01",
+      "element_type": "subcategory",
+      "identifier": "RC.RP-01",
+      "text": "RC.RP-01: The recovery portion of the incident response plan is executed once initiated from the incident response process",
+      "parent_id": "csf-RC.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.RP"
+      }
+    },
+    {
+      "id": "csf-RC.RP-02",
+      "element_type": "subcategory",
+      "identifier": "RC.RP-02",
+      "text": "RC.RP-02: Recovery actions are selected, scoped, prioritized, and performed",
+      "parent_id": "csf-RC.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.RP"
+      }
+    },
+    {
+      "id": "csf-RC.RP-03",
+      "element_type": "subcategory",
+      "identifier": "RC.RP-03",
+      "text": "RC.RP-03: The integrity of backups and other restoration assets is verified before using them for restoration",
+      "parent_id": "csf-RC.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.RP"
+      }
+    },
+    {
+      "id": "csf-RC.RP-04",
+      "element_type": "subcategory",
+      "identifier": "RC.RP-04",
+      "text": "RC.RP-04: Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms",
+      "parent_id": "csf-RC.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.RP"
+      }
+    },
+    {
+      "id": "csf-RC.RP-05",
+      "element_type": "subcategory",
+      "identifier": "RC.RP-05",
+      "text": "RC.RP-05: The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed",
+      "parent_id": "csf-RC.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.RP"
+      }
+    },
+    {
+      "id": "csf-RC.RP-06",
+      "element_type": "subcategory",
+      "identifier": "RC.RP-06",
+      "text": "RC.RP-06: The end of incident recovery is declared based on criteria, and incident-related documentation is completed",
+      "parent_id": "csf-RC.RP",
+      "metadata": {
+        "level": "subcategory",
+        "function": "RC",
+        "category": "RC.RP"
+      }
+    }
+  ]
+}
