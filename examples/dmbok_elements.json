@@ -1,0 +1,133 @@
+{
+  "document": {
+    "id": "dmbok",
+    "title": "DAMA Data Management Body of Knowledge",
+    "short_name": "DMBOK2",
+    "version": "2.0",
+    "author": "DAMA International",
+    "url": "https://dama.org/dmbok",
+    "date": "2017-07-01"
+  },
+  "elements": [
+    {
+      "id": "dmbok-3.0",
+      "element_type": "knowledge_area",
+      "identifier": "3.0",
+      "text": "Data Governance. The exercise of authority, control, and shared decision-making (planning, monitoring, and enforcement) over the management of data assets. Data governance defines how data decisions are made and how people and processes are expected to behave in relation to data. Goals: (1) Enable the organization to manage data as an asset, (2) Define, approve, communicate, and implement principles, policies, procedures, metrics, tools, and responsibilities for data management, (3) Monitor and guide policy compliance, data usage, and management activities. Activities include: Define data governance for the organization, perform readiness assessment, perform discovery and business alignment, develop organizational touch points, develop data governance strategy, define the DG operating framework, develop goals/principles/policies, underwrite data management projects, engage change management, engage in issue management, assess regulatory compliance requirements, sponsor data standards and procedures, develop business glossary, coordinate with architecture groups, and sponsor data asset valuation. Tools and techniques: online presence/websites, business glossary tools, workflow tools, document management tools, and data governance scorecards. Key deliverables: DG strategy, data strategy, business/DG strategy roadmap, data principles, data governance policies and processes, operating framework, business glossary, DG scorecard, communications plan. Key roles: CDO, data stewards, data owners, executive data stewards, coordinating data stewards, business data stewards, DG council.",
+      "parent_id": null,
+      "metadata": {"chapter": 3}
+    },
+    {
+      "id": "dmbok-3.1",
+      "element_type": "topic",
+      "identifier": "3.1",
+      "text": "Data Governance Strategy and Organization. Define data governance for the organization by establishing the scope, vision, and operating principles for data governance. Perform readiness assessment to evaluate organizational maturity, culture, and existing data management practices. Perform discovery and business alignment to identify critical data domains, key stakeholders, and business drivers that justify governance investment. Develop organizational touch points to establish connections between data governance and other organizational functions including compliance, risk, legal, IT, and business units. Develop data governance strategy including governance model (centralized, federated, or hybrid), decision rights allocation, escalation procedures, and success metrics. Activities: 2.1 Define Data Governance for the Organization, 2.2 Perform Readiness Assessment, 2.3 Perform Discovery and Business Alignment, 2.4 Develop Organizational Touch Points, 2.5 Develop Data Governance Strategy.",
+      "parent_id": "dmbok-3.0",
+      "metadata": {"chapter": 3, "activity_group": "Plan"}
+    },
+    {
+      "id": "dmbok-3.2",
+      "element_type": "topic",
+      "identifier": "3.2",
+      "text": "Data Governance Operating Framework and Implementation. Define the DG operating framework including governance bodies (councils, working groups, steering committees), their charters, meeting cadence, decision-making authority, and reporting structures. Develop goals, principles, and policies that establish data handling requirements, data classification schemes, data sharing agreements, and compliance obligations. Underwrite data management projects to ensure governance is embedded in project lifecycle from initiation through delivery. Engage change management to drive organizational adoption of governance practices, including training, communications, and stakeholder engagement. Engage in issue management by establishing formal processes for identifying, escalating, tracking, and resolving data-related issues. Assess regulatory compliance requirements by mapping applicable regulations to data governance controls and monitoring for changes. Activities: 2.6 Define the DG Operating Framework, 2.7 Develop Goals/Principles/Policies, 2.8 Underwrite Data Management Projects, 2.9 Engage Change Management, 2.10 Engage in Issue Management, 2.11 Assess Regulatory Compliance Requirements.",
+      "parent_id": "dmbok-3.0",
+      "metadata": {"chapter": 3, "activity_group": "Develop/Control"}
+    },
+    {
+      "id": "dmbok-4.0",
+      "element_type": "knowledge_area",
+      "identifier": "4.0",
+      "text": "Data Architecture. Defining the blueprint for managing data assets by aligning with organizational strategy to design master blueprints for data — the overall structure of data and data-related resources as an integral part of the enterprise architecture. Goals: (1) Identify data storage and processing requirements, (2) Design structures and plans to meet the current and long-term data requirements of the enterprise, (3) Strategically prepare organizations to quickly evolve their products, services, and data to take advantage of business opportunities inherent in emerging technologies. Essential components include outcomes (models, definitions, data flows), activities (form, deploy, and fulfill DA intentions), and behavior (collaborations, mindsets, and skills among roles). Activities: Establish Data Architecture Practice including evaluating existing DA specifications, developing a roadmap, and managing enterprise requirements within projects; Integrate with Enterprise Architecture. Tools: Data modeling tools, asset management software, graphical design applications. Techniques include lifecycle projections and data architecture governance interactions with other knowledge areas.",
+      "parent_id": null,
+      "metadata": {"chapter": 4}
+    },
+    {
+      "id": "dmbok-4.1",
+      "element_type": "topic",
+      "identifier": "4.1",
+      "text": "Enterprise Data Architecture Practice. Evaluate existing data architecture specifications to understand the current state of data structures, models, and standards across the enterprise. Develop a data architecture roadmap that defines the target state, identifies gaps between current and target states, and sequences initiatives to close those gaps. Manage enterprise data requirements within projects to ensure that all data-related project work conforms to architectural standards and contributes to the target state. Integrate data architecture with enterprise architecture including business architecture, application architecture, and technology architecture to ensure alignment and coherence across all architectural domains. Activities: 2.1 Establish Data Architecture Practice (2.1.1 Evaluate Existing DA Specifications, 2.1.2 Develop a Roadmap, 2.1.3 Manage Enterprise Requirements within Projects), 2.2 Integrate with Enterprise Architecture.",
+      "parent_id": "dmbok-4.0",
+      "metadata": {"chapter": 4, "activity_group": "Plan/Develop"}
+    },
+    {
+      "id": "dmbok-5.0",
+      "element_type": "knowledge_area",
+      "identifier": "5.0",
+      "text": "Data Modeling and Design. The process of discovering, analyzing, representing, and communicating data requirements in a precise form called the data model. Goals (IDIEE): (1) Identify and define data requirements, (2) Design data structures and other solutions to meet these requirements, (3) Implement and maintain solution components that fulfill these requirements, (4) Ensure solution conformance to data architecture and standards as appropriate, (5) Ensure the integrity, security, usability, and maintainability of structured data assets. Activities organized into 4 groups: (A1) Data Modeling/Analysis and Solution Design — analyze information requirements, develop and maintain conceptual/logical/physical data models; (A2) Detailed Data Design — design physical databases, information products, data access services, data integration services; (A3) Data Model and Design Quality Management — develop data modeling and design standards, perform reviews; (A4) Data Implementation — implement and maintain data structures. Tools include data modeling tools, data management systems, software development tools, testing tools, data profiling tools, model management tools, configuration management tools. Inputs: business goals/strategies, data needs/strategies, data standards, data architecture, process architecture, application architecture, technical architecture. Deliverables: data requirements and business rules, conceptual/logical/physical data models, metadata, standards, reviews, version-controlled models, test data.",
+      "parent_id": null,
+      "metadata": {"chapter": 5}
+    },
+    {
+      "id": "dmbok-5.1",
+      "element_type": "topic",
+      "identifier": "5.1",
+      "text": "Data Modeling, Analysis, and Solution Design. Analyze information requirements by gathering and documenting business data needs from stakeholders, business processes, and regulatory requirements. Develop and maintain conceptual data models that represent high-level business entities and their relationships independent of technology. Develop and maintain logical data models that define detailed entity structures, attributes, relationships, and business rules in a technology-independent form. Develop and maintain physical data models that translate logical models into platform-specific implementations including table definitions, indexes, partitioning, and storage specifications. Activities: 2.1.1 Analyze Information Requirements, 2.1.2 Develop and Maintain Conceptual Data Models, 2.1.3 Develop and Maintain Logical Data Models, 2.1.4 Develop and Maintain Physical Data Models.",
+      "parent_id": "dmbok-5.0",
+      "metadata": {"chapter": 5, "activity_group": "Develop"}
+    },
+    {
+      "id": "dmbok-6.0",
+      "element_type": "knowledge_area",
+      "identifier": "6.0",
+      "text": "Data Storage and Operations. Management of structured physical data assets storage, deployment, and management across the data lifecycle. Covers database technology support, data technology management, and database operations including design, implementation, administration, performance monitoring and tuning, backup and recovery, data retention and archival, and capacity planning. Goals: (1) Manage the availability of data throughout the data lifecycle, (2) Ensure the integrity of data assets, (3) Manage the performance of data transactions. Activities include database support, database technology management, and database operations management. This knowledge area interfaces with data architecture for design standards, data security for access controls, and data governance for operational policies.",
+      "parent_id": null,
+      "metadata": {"chapter": 6}
+    },
+    {
+      "id": "dmbok-7.0",
+      "element_type": "knowledge_area",
+      "identifier": "7.0",
+      "text": "Data Security. Ensuring privacy, confidentiality, and appropriate access to data including PII (personally identifiable information), PHI (protected health information), and sensitive business data. Goals: (1) Enable appropriate and compliant access to enterprise data assets, (2) Ensure regulatory compliance for privacy and confidentiality, (3) Protect enterprise data assets from unauthorized access, manipulation, and destruction. Activities: Define enterprise data security requirements, define data security policies and standards, define data security standards and procedures, manage users/passwords/group memberships, manage views and access permissions, monitor user authentication and access behavior, classify data for confidentiality constraints, audit data security. Essential concepts include data classification, sensitivity levels, encryption, masking, tokenization, role-based access control (RBAC), attribute-based access control (ABAC), privacy impact assessments, and regulatory compliance (GDPR, CCPA, HIPAA, SOX). Tools include identity management tools, data masking tools, encryption tools, network security tools, and intrusion detection systems.",
+      "parent_id": null,
+      "metadata": {"chapter": 7}
+    },
+    {
+      "id": "dmbok-8.0",
+      "element_type": "knowledge_area",
+      "identifier": "8.0",
+      "text": "Data Integration and Interoperability. Processes related to the movement and consolidation of data within and between data stores, applications, and organizations. This knowledge area is new in DMBOK2, highlighting its increasing importance. Covers data acquisition, extraction, transformation, movement, delivery, replication, federation, virtualization, and operational support. Goals: (1) Make data available in the format and timeframe needed by data consumers, (2) Consolidate data physically and virtually into hub systems, (3) Lower cost and complexity of managing solutions by developing shared models and interfaces, (4) Identify meaningful events and automatically trigger alerts and actions. Activities include designing data integration solutions, implementing ETL/ELT processes, managing data exchanges, maintaining interfaces, and supporting operational data stores. Techniques include batch ETL, real-time streaming, change data capture (CDC), message-oriented middleware, API management, data virtualization, and master data integration. Tools include ETL/ELT platforms, enterprise service buses, API gateways, data virtualization servers, and message queues.",
+      "parent_id": null,
+      "metadata": {"chapter": 8}
+    },
+    {
+      "id": "dmbok-9.0",
+      "element_type": "knowledge_area",
+      "identifier": "9.0",
+      "text": "Document and Content Management. Storing, protecting, indexing, and enabling access to data found in unstructured sources including documents, web pages, emails, images, audio, and video. Goals: (1) Protect and ensure the availability of data stored in unstructured formats, (2) Enable effective and efficient retrieval and use of unstructured data and content, (3) Ensure compliance with legal obligations and customer expectations regarding records and content retention. Activities include defining content management strategy, implementing content management systems, managing document lifecycle (creation, review, approval, distribution, archival, destruction), implementing records management, establishing taxonomy and classification schemes, enabling enterprise search, and managing digital asset repositories. This area increasingly intersects with data governance as organizations manage growing volumes of unstructured data.",
+      "parent_id": null,
+      "metadata": {"chapter": 9}
+    },
+    {
+      "id": "dmbok-10.0",
+      "element_type": "knowledge_area",
+      "identifier": "10.0",
+      "text": "Reference and Master Data Management. Managing shared data to reduce redundancy and ensure consistency of the most critical, commonly shared data entities across the enterprise. DMBOK2 classifies data into four categories: reference data (standardized lookup values such as country codes, currency codes, status codes), master data (core business entities such as customer, product, account, location), transactional data (records of business events), and metadata (data about data). Goals: (1) Provide authoritative source of reconciled and quality-assessed master and reference data, (2) Lower cost and complexity through shared data models and integration patterns, (3) Provide an accurate assessment of data quality to stewards and governing bodies. Activities include defining reference data sets and hierarchies, establishing golden record processes for master data, implementing match-and-merge logic, managing data sharing agreements, governing shared data domains, and integrating master data with operational and analytical systems.",
+      "parent_id": null,
+      "metadata": {"chapter": 10}
+    },
+    {
+      "id": "dmbok-11.0",
+      "element_type": "knowledge_area",
+      "identifier": "11.0",
+      "text": "Data Warehousing and Business Intelligence. Planning, implementing, and managing processes for providing decision support data across the enterprise. Covers the full lifecycle of analytical data from sourcing through presentation. Goals: (1) Build and maintain the analytical data environment, (2) Enable effective business analysis and decision-making, (3) Provide data in formats and timeframes required by business intelligence consumers. Activities include defining analytics/BI strategy, designing data warehouse and data mart architectures (dimensional modeling, star/snowflake schemas), implementing ETL processes for analytical data, managing OLAP (Online Analytical Processing) cubes, supporting data mining and statistical analysis, deploying reporting and visualization tools, enabling self-service analytics for business users, and governing analytical data quality. Essential concepts include dimensional modeling, slowly changing dimensions, conformed dimensions, data vault, data lakehouse, real-time analytics, and embedded analytics. Deliverables: DW/BI strategy, logical and physical DW design, ETL specifications, BI reports and dashboards, analytics models, data quality metrics for analytical data.",
+      "parent_id": null,
+      "metadata": {"chapter": 11}
+    },
+    {
+      "id": "dmbok-12.0",
+      "element_type": "knowledge_area",
+      "identifier": "12.0",
+      "text": "Metadata Management. Planning, implementing, and controlling activities to enable access to high-quality, integrated metadata — data about data. Metadata describes all other types of data and is essential to understanding the meaning, context, lineage, and quality of data assets. Goals: (1) Provide organizational understanding of business terms, (2) Collect and integrate metadata from diverse sources, (3) Provide a standard way to access metadata, (4) Ensure metadata quality and security. Activities include defining metadata strategy, establishing metadata architecture and standards, implementing metadata repositories and data catalogs, capturing and maintaining business metadata (business glossary terms, data definitions, data classifications, ownership), capturing and maintaining technical metadata (schemas, data types, transformation rules, lineage, dependencies), integrating metadata across knowledge areas and systems, and enabling metadata-driven automation. Tools include metadata repositories, data catalogs, business glossary tools, data lineage tools, and automated metadata harvesting. Deliverables: metadata strategy, metadata architecture, business glossary, data catalog, data lineage documentation, metadata quality metrics.",
+      "parent_id": null,
+      "metadata": {"chapter": 12}
+    },
+    {
+      "id": "dmbok-13.0",
+      "element_type": "knowledge_area",
+      "identifier": "13.0",
+      "text": "Data Quality. Planning and implementing quality management techniques to measure, assess, improve, and ensure the fitness of data for use — measured through various data quality dimensions. High data quality engenders trust in operational and strategic decisions. Goals: (1) Develop a governed approach to making data fit for purpose, (2) Define standards, requirements, and specifications for data quality controls as part of the data lifecycle, (3) Define and implement processes to measure, monitor, and report on data quality conformance, (4) Identify and advocate for opportunities to improve the quality of data. Activities: Define high-quality data, define a data quality strategy, identify critical data and business rules, perform data quality assessment, identify potential improvements, develop and deploy data quality operations, and measure/monitor data quality. Essential concepts: quality dimensions (accuracy, completeness, consistency, integrity, reasonability, timeliness, uniqueness, validity), critical data elements, data profiling, data cleansing, data standardization, root cause analysis, statistical process control, business rules, data quality SLAs, and preventive vs. corrective actions. Tools: data profiling tools, data quality measurement tools, data cleansing tools, ETL tools with quality features, metadata repositories, and query/reporting tools. Deliverables: DQ strategy, DQ measurement results, DQ dashboards, DQ issue logs, DQ improvement plans, DQ SLAs, data quality business rules.",
+      "parent_id": null,
+      "metadata": {"chapter": 13}
+    }
+  ]
+}

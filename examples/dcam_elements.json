@@ -1,0 +1,205 @@
+{
+  "document": {
+    "id": "dcam",
+    "title": "EDM Council Data Management Capability Assessment Model",
+    "short_name": "DCAM",
+    "version": "2.2",
+    "author": "EDM Council",
+    "url": "https://edmcouncil.org/frameworks/dcam/",
+    "date": "2022-01-01"
+  },
+  "elements": [
+    {
+      "id": "dcam-1.1",
+      "element_type": "capability",
+      "identifier": "1.1",
+      "text": "Data Management Strategy is Specified and Shared. The data management strategy (DMS) must be developed as a formal, documented artifact that consolidates the organization's vision for how data will be managed as a strategic asset. The DMS must be aligned with high-level organizational objectives and demonstrate clear linkage to business outcomes. It must address core strategy concepts from each DCAM component including governance, architecture, quality, and analytics. The DMS must include an established mechanism for executive approval and sponsorship. The strategy must be evaluated for enforceability — meaning it can be operationalized through policies, standards, and measurable controls. The DMS must be communicated and socialized across the organization so that all stakeholders understand the strategic direction and their role in executing it. Sub-capabilities include: (1.1.1) The DMS is developed, documented, and consolidated; (1.1.2) The DMS is aligned with high-level organizational objectives; (1.1.3) The DMS addresses the core strategy concepts from each DCAM component; (1.1.4) The DMS includes an established mechanism for approval; (1.1.5) The DMS has been evaluated as being enforceable.",
+      "parent_id": null,
+      "metadata": {"component": "Data Management Strategy & Business Case", "sub_capabilities": 5, "objectives": 14}
+    },
+    {
+      "id": "dcam-1.2",
+      "element_type": "capability",
+      "identifier": "1.2",
+      "text": "The Business Case is Defined. High-level business requirements for data management must be documented and serve as the foundation for justifying the data management program. Business requirements must be prioritized through a formal process, approved by stakeholders, and incorporated into the data management strategy. The data management business case must be explicitly mapped to and aligned with the DMS to demonstrate value delivery. Expected data management outcomes must be defined with clear sequencing and milestones that enable measurement of progress. The business case must be socialized and validated by key stakeholders across the organization to ensure buy-in and sustained support. Many initiatives fail because they start with technology instead of a business case — DCAM forces alignment of data management with organizational objectives first, ensuring governance efforts are justified, funded, and endorsed by executive management. Sub-capabilities include: (1.2.1) High-level business requirements are documented; (1.2.2) Business requirements have been prioritized, approved, and incorporated into the DMS; (1.2.3) The DM business case is mapped to and aligned with the DMS; (1.2.4) Expected DM outcomes are defined and sequenced; (1.2.5) The DM business case is socialized and validated by stakeholders.",
+      "parent_id": null,
+      "metadata": {"component": "Data Management Strategy & Business Case", "sub_capabilities": 5, "objectives": 12}
+    },
+    {
+      "id": "dcam-1.3",
+      "element_type": "capability",
+      "identifier": "1.3",
+      "text": "The Data Content and Usage Strategy is Defined. The data content strategy must define what data the organization needs to manage, including critical data elements, data domains, and data classifications. The data usage strategy must identify how data will be consumed across the enterprise — for operational processes, regulatory reporting, analytics, risk management, and decision-making. The data management deployment strategy must be communicated to all stakeholders with clear articulation of timelines, resource requirements, technology dependencies, and organizational change management needs. Sub-capabilities include: (1.3.1) The Data Content Strategy is defined; (1.3.2) The Data Usage Strategy is identified; (1.3.3) The Data Management Deployment Strategy is communicated.",
+      "parent_id": null,
+      "metadata": {"component": "Data Management Strategy & Business Case", "sub_capabilities": 3, "objectives": 9}
+    },
+    {
+      "id": "dcam-2.1",
+      "element_type": "capability",
+      "identifier": "2.1",
+      "text": "Data Management Program is Established. The data management program (DMP) strategy and approach must be formally defined and adopted by the organization. A dedicated program management office (PMO) must be established with clear authority and accountability for data management execution. Organizational roles and responsibilities for data management must be defined at every level — from executive sponsors to data stewards to operational staff — and those roles must be staffed with qualified individuals. Program oversight mechanisms including status reporting, milestone tracking, risk management, and stakeholder communication must be operational. The DMP must integrate with existing enterprise program management practices and demonstrate measurable progress against the data management strategy.",
+      "parent_id": null,
+      "metadata": {"component": "Data Management Program & Funding Model", "sub_capabilities": 4, "objectives": 12}
+    },
+    {
+      "id": "dcam-2.2",
+      "element_type": "capability",
+      "identifier": "2.2",
+      "text": "Data Management Funding Model is Established. The funding model for the data management program must be formally documented and approved by executive leadership. Budget allocations must be explicitly mapped to program components and capabilities to ensure transparent resource distribution. Ongoing funding mechanisms must be sustainable across fiscal years and aligned with organizational financial planning cycles. The funding model must account for both run-the-bank (operational) and change-the-bank (transformational) costs. Cost-benefit analysis and return on investment metrics must be established to justify continued investment and demonstrate value delivery.",
+      "parent_id": null,
+      "metadata": {"component": "Data Management Program & Funding Model", "sub_capabilities": 3, "objectives": 8}
+    },
+    {
+      "id": "dcam-3.1",
+      "element_type": "capability",
+      "identifier": "3.1",
+      "text": "Data Architecture Program is Established. The data architecture (DA) strategy and approach must be formally defined and adopted, establishing how the organization will design, build, and maintain its data architecture as a core enabler of the data management program. DA stakeholder roles and responsibilities — including data architects, business analysts, and technology architects — must be clearly defined, communicated, and staffed. DA processes for requirements gathering, design review, standards compliance, and change management must be defined and operational. The DA practice must produce and maintain enterprise data models, data flow diagrams, and architecture standards that guide all data-related initiatives.",
+      "parent_id": null,
+      "metadata": {"component": "Business & Data Architecture", "sub_capabilities": 3, "objectives": 9}
+    },
+    {
+      "id": "dcam-3.2",
+      "element_type": "capability",
+      "identifier": "3.2",
+      "text": "Business Architecture Alignment. Business architecture (BA) must define process input and output data requirements to ensure that data flows support business processes effectively. Business data requirements must include data usage specifications, data restrictions, data retention rules, and data ethics considerations to comply with regulatory and organizational standards. BA processes must incorporate root cause analysis and fix of people or process issues that create data quality problems. Data architecture governance must be aligned with business architecture governance to ensure that architectural decisions serve both business and data management objectives. Cross-functional collaboration between business architects and data architects must be formalized.",
+      "parent_id": null,
+      "metadata": {"component": "Business & Data Architecture", "sub_capabilities": 4, "objectives": 12}
+    },
+    {
+      "id": "dcam-3.3",
+      "element_type": "capability",
+      "identifier": "3.3",
+      "text": "Data Identification and Inventory. Logical data domains must be identified, documented, inventoried, and authorized by appropriate business stakeholders. Physical repositories of data — including databases, data lakes, file systems, and third-party data stores — must be located, documented, and inventoried with metadata about their contents, ownership, and usage. Physical data must be cataloged in a searchable data catalog that enables discovery, understanding, and appropriate access. The inventory must capture lineage information showing how data flows between systems and transformations applied along the way.",
+      "parent_id": null,
+      "metadata": {"component": "Business & Data Architecture", "sub_capabilities": 3, "objectives": 8}
+    },
+    {
+      "id": "dcam-3.4",
+      "element_type": "capability",
+      "identifier": "3.4",
+      "text": "Enterprise Data Model and Standards. Enterprise entities must be identified, defined, modeled, and standardized across the organization using consistent naming conventions and semantic definitions. Business definitions must be formally composed, documented, approved by data governance bodies, and published in a business glossary accessible to all stakeholders. Unique identification standards must be established for master data entities to ensure consistent reference across systems. Data modeling standards and naming conventions must be defined, communicated, and enforced through governance processes and architectural review.",
+      "parent_id": null,
+      "metadata": {"component": "Business & Data Architecture", "sub_capabilities": 4, "objectives": 11}
+    },
+    {
+      "id": "dcam-4.1",
+      "element_type": "capability",
+      "identifier": "4.1",
+      "text": "Technology Architecture Strategy. The technology architecture (TA) strategy and approach must be formally defined and adopted, covering how data technology platforms will be selected, deployed, managed, and retired. The TA must be explicitly aligned with the data management strategy to ensure that technology investments support data governance, quality, architecture, and analytics objectives. Technology standards and platforms — including databases, integration tools, analytics platforms, cloud services, and metadata repositories — must be documented, evaluated against selection criteria, and approved through a formal governance process. Technology roadmaps must account for data management requirements including scalability, security, interoperability, and regulatory compliance.",
+      "parent_id": null,
+      "metadata": {"component": "Data & Technology Architecture", "sub_capabilities": 3, "objectives": 10}
+    },
+    {
+      "id": "dcam-4.2",
+      "element_type": "capability",
+      "identifier": "4.2",
+      "text": "Data Integration and Interoperability Architecture. Data integration standards, patterns, and tools must be formally defined to govern how data moves between systems. ETL (Extract, Transform, Load) and ELT (Extract, Load, Transform) processes must be documented with clear specifications for data transformations, validation rules, error handling, and reconciliation. Data interoperability across platforms, applications, and business units must be enabled through standardized APIs, data exchange formats, messaging protocols, and service interfaces. Data virtualization and federation strategies must be evaluated and deployed where appropriate to reduce data redundancy while maintaining governed access to authoritative sources.",
+      "parent_id": null,
+      "metadata": {"component": "Data & Technology Architecture", "sub_capabilities": 3, "objectives": 9}
+    },
+    {
+      "id": "dcam-4.3",
+      "element_type": "capability",
+      "identifier": "4.3",
+      "text": "Metadata Management Architecture. Metadata management standards and processes must be formally defined, covering both business metadata (definitions, classifications, ownership) and technical metadata (schemas, data types, lineage, transformation rules). A metadata repository or data catalog must be operational and integrated with data governance processes to enable data discovery, impact analysis, and compliance reporting. Metadata capture must be automated where possible through integration with data integration tools, databases, and analytics platforms. The metadata architecture must support both active metadata management (driving automation and policy enforcement) and passive metadata management (documentation and discovery).",
+      "parent_id": null,
+      "metadata": {"component": "Data & Technology Architecture", "sub_capabilities": 3, "objectives": 9}
+    },
+    {
+      "id": "dcam-5.1",
+      "element_type": "capability",
+      "identifier": "5.1",
+      "text": "Data Quality Program is Established. The data quality (DQ) strategy and approach must be formally defined and adopted, establishing the organization's commitment to measuring and improving the fitness of data for its intended use. DQ roles and responsibilities — including data quality analysts, data stewards, and business owners of critical data elements — must be clearly defined, communicated, and staffed. DQ processes must be defined and operational, including data profiling, data quality rule definition, quality measurement, issue identification, root cause analysis, remediation, and continuous monitoring. The DQ program must be integrated with data governance to ensure that quality standards are enforced through policies and accountability structures.",
+      "parent_id": null,
+      "metadata": {"component": "Data Quality Management", "sub_capabilities": 3, "objectives": 10}
+    },
+    {
+      "id": "dcam-5.2",
+      "element_type": "capability",
+      "identifier": "5.2",
+      "text": "Data Quality Requirements are Defined. Business-driven data quality requirements must be documented for each critical data domain, specifying the acceptable thresholds for each quality dimension. Critical data elements (CDEs) must be identified and prioritized based on their impact on business processes, regulatory reporting, risk management, and decision-making. Data quality dimensions — including accuracy, completeness, timeliness, consistency, validity, and uniqueness — must be explicitly defined with measurable business rules and quality thresholds. Data quality SLAs must be established between data producers and data consumers to formalize quality expectations and accountability.",
+      "parent_id": null,
+      "metadata": {"component": "Data Quality Management", "sub_capabilities": 3, "objectives": 8}
+    },
+    {
+      "id": "dcam-5.3",
+      "element_type": "capability",
+      "identifier": "5.3",
+      "text": "Data Quality Measurement and Monitoring. Data quality must be measured against defined business rules and quality thresholds using automated profiling and validation tools. Ongoing monitoring and profiling must be established to detect anomalies, data drift, and quality degradation in near-real-time. Data quality dashboards and reporting must communicate DQ status, trends, and issue resolution progress to stakeholders at all levels — from executive scorecards to operational detail. Remediation processes must be defined and operational, with clear escalation paths, root cause analysis procedures, and tracked resolution of identified quality issues.",
+      "parent_id": null,
+      "metadata": {"component": "Data Quality Management", "sub_capabilities": 4, "objectives": 11}
+    },
+    {
+      "id": "dcam-6.1",
+      "element_type": "capability",
+      "identifier": "6.1",
+      "text": "Data Governance Program is Established. The data governance (DG) strategy and approach must be formally defined and adopted, establishing the operating model for how data decisions are made, who has authority, and how policies are enforced. The DG organizational structure must be designed and implemented, including governance councils, working groups, and steering committees with clear charters and decision-making authority. DG stakeholder roles and responsibilities — including data owners, data stewards, data custodians, and governance coordinators — must be formally defined, implemented, and staffed. DG processes for issue escalation, policy exception management, data classification, and compliance monitoring must be defined and operational.",
+      "parent_id": null,
+      "metadata": {"component": "Data Governance", "sub_capabilities": 4, "objectives": 12}
+    },
+    {
+      "id": "dcam-6.2",
+      "element_type": "capability",
+      "identifier": "6.2",
+      "text": "Data Governance Policies and Standards. Data management policies and standards must be written, complete, and cover all aspects of data handling including data classification, access control, data sharing, data retention, data quality, and data privacy. Policies and standards must be reviewed and approved by organizational stakeholders who understand the business implications. They must also be reviewed and approved by executive governing bodies to ensure executive sponsorship and enforceability. Policies and standards must be aligned with the organization-wide control function policies and standards (e.g., compliance, risk, audit, legal) to avoid conflicts and ensure comprehensive coverage. All policies and standards must be enforceable through measurable controls and auditable through defined assessment procedures.",
+      "parent_id": null,
+      "metadata": {"component": "Data Governance", "sub_capabilities": 5, "objectives": 13}
+    },
+    {
+      "id": "dcam-6.3",
+      "element_type": "capability",
+      "identifier": "6.3",
+      "text": "Data Governance Operational Oversight. Program funding governance must be established and operational to ensure that data management investments are reviewed, approved, and tracked. Program and project review and approval processes must be established to ensure all data-related initiatives comply with governance standards and architectural principles. Business process optimization for data management must be enforced, ensuring that data governance requirements are embedded in operational workflows. Issue management and escalation procedures must be formally defined with clear escalation paths, resolution timelines, and accountability for root cause resolution.",
+      "parent_id": null,
+      "metadata": {"component": "Data Governance", "sub_capabilities": 4, "objectives": 10}
+    },
+    {
+      "id": "dcam-7.1",
+      "element_type": "capability",
+      "identifier": "7.1",
+      "text": "Data Control Environment is Established. The data controls strategy and approach must be formally defined and adopted, establishing how the organization will identify, assess, mitigate, and monitor data-related risks. Data risk assessment processes must be documented, covering risks related to data quality, data security, data privacy, regulatory compliance, and operational continuity. Control procedures must be mapped to specific data assets and data processes, with clear ownership and testing schedules. Regulatory and compliance requirements from applicable laws, regulations, and industry standards must be identified, mapped to data controls, and continuously monitored for changes.",
+      "parent_id": null,
+      "metadata": {"component": "Data Control Environment", "sub_capabilities": 3, "objectives": 10}
+    },
+    {
+      "id": "dcam-7.2",
+      "element_type": "capability",
+      "identifier": "7.2",
+      "text": "Data Security and Privacy Controls. Data classification and sensitivity labeling must be implemented across all data assets, categorizing data by confidentiality level (public, internal, confidential, restricted) and regulatory sensitivity (PII, PHI, financial data). Access control mechanisms must be defined and enforced using role-based access control (RBAC) or attribute-based access control (ABAC), with regular access reviews and recertification. Data privacy requirements arising from regulations (GDPR, CCPA, HIPAA, etc.) and organizational policies must be addressed through privacy impact assessments, consent management, and data subject rights processes. Data lineage and comprehensive audit trails must support compliance verification, incident investigation, and regulatory reporting.",
+      "parent_id": null,
+      "metadata": {"component": "Data Control Environment", "sub_capabilities": 4, "objectives": 12}
+    },
+    {
+      "id": "dcam-7.3",
+      "element_type": "capability",
+      "identifier": "7.3",
+      "text": "Data Lifecycle Management. Data retention and disposal policies must be formally defined, specifying retention periods for each data classification and regulatory requirement. Data archival processes must be operational, ensuring that data past its active use period is moved to appropriate long-term storage while remaining accessible for regulatory, legal, and audit purposes. The full data lifecycle — from creation/acquisition through active use, archival, and ultimate destruction — must be managed through defined processes with appropriate governance controls at each stage. Data destruction must be verified and documented to ensure compliance with retention policies and legal requirements.",
+      "parent_id": null,
+      "metadata": {"component": "Data Control Environment", "sub_capabilities": 3, "objectives": 8}
+    },
+    {
+      "id": "dcam-8.1",
+      "element_type": "capability",
+      "identifier": "8.1",
+      "text": "Analytics Program is Established. The analytics strategy and approach must be formally defined and adopted, covering descriptive, diagnostic, predictive, and prescriptive analytics. A categorization system for levels of analytics maturity must be defined and adopted across the organization. The analytics operating model must be defined, including organizational structure, roles, centers of excellence, and delivery models (centralized, federated, or hybrid). The funding model for analytics must be established, approved, and adopted with clear allocation of resources. Analytics governance structures must be in place to ensure model risk management, data usage compliance, and output quality. An analytics methodology and model documentation standard must be adopted to ensure reproducibility, auditability, and knowledge transfer.",
+      "parent_id": null,
+      "metadata": {"component": "Analytics", "sub_capabilities": 6, "objectives": 16}
+    },
+    {
+      "id": "dcam-8.2",
+      "element_type": "capability",
+      "identifier": "8.2",
+      "text": "Analytics Business Alignment. Dependencies between analytics capabilities and business architecture must be understood and addressed to ensure analytics initiatives serve real business needs. Prioritization of analytics work must be driven by business strategy rather than technology availability. Analytics must support and influence business needs and be actionable — meaning analytics outputs must be integrated into business processes and decision-making workflows. Analytics impact must be measured and demonstrated to be driving business value through defined KPIs and outcome metrics.",
+      "parent_id": null,
+      "metadata": {"component": "Analytics", "sub_capabilities": 4, "objectives": 10}
+    },
+    {
+      "id": "dcam-8.3",
+      "element_type": "capability",
+      "identifier": "8.3",
+      "text": "Analytics Data Management. Analytics data lineage must be fully understood, and only authoritative, governed data sources must be used for analytics and model training. Data preparation and feature engineering processes must be standardized with documented transformation logic and quality checks. Analytics-specific data quality controls must be implemented to address issues like training data bias, data drift, concept drift, and representativeness. Model training data governance must be established, covering data provenance, versioning, consent tracking, and ethical use of data in machine learning and AI applications.",
+      "parent_id": null,
+      "metadata": {"component": "Analytics", "sub_capabilities": 4, "objectives": 10}
+    }
+  ]
+}
