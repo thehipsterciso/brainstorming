@@ -261,26 +261,38 @@ class ElementFilter:
 
 
 class AIMapper:
-    """AI-powered STRM mapping engine using the Anthropic Claude API.
+    """AI-powered STRM mapping engine.
 
     Iterates through element pairs between two frameworks, sends their
-    content to Claude for set-theory relationship analysis, and produces
+    content to an AI for set-theory relationship analysis, and produces
     fully-provenance MappingRecords that integrate with STRMEngine.
 
-    Usage::
+    Supports two modes:
+      1. **API mode** — Calls the Anthropic Claude API directly.
+      2. **Callback mode** — Uses a user-supplied ``analyze_fn`` callable.
+         This lets any AI backend (including an interactive Claude session)
+         power the analysis without an API key.
 
-        from nist_strm import STRMEngine
-        from nist_strm.ai_mapper import AIMapper
-
-        engine = STRMEngine()
-        # ... register documents and elements ...
+    Usage (API mode)::
 
         mapper = AIMapper(engine, model="claude-sonnet-4-6")
-        result = mapper.map_frameworks("dcam", "dmbok")
+        result = mapper.map_frameworks("csf", "sp53")
 
-        for m in result.mappings:
-            engine.add_mapping(m)
+    Usage (callback mode)::
+
+        def my_analyzer(focal, reference):
+            # Return a dict matching the record_strm_mapping tool schema
+            return {"relationship": "intersects with", ...}
+
+        mapper = AIMapper(engine, analyze_fn=my_analyzer)
+        result = mapper.map_frameworks("csf", "sp53")
     """
+
+    # Type alias for the analyze callback
+    AnalyzeFn = Callable[
+        ["FrameworkElement", "FrameworkElement"],
+        dict[str, Any],
+    ]
 
     def __init__(
         self,
@@ -292,6 +304,7 @@ class AIMapper:
         temperature: float = 0.0,
         audit_trail: AuditTrail | None = None,
         on_progress: Callable[[int, int, MappingAnalysis | None], None] | None = None,
+        analyze_fn: AnalyzeFn | None = None,
     ) -> None:
         """Initialize the AI mapper.
 
@@ -303,23 +316,34 @@ class AIMapper:
             temperature: Sampling temperature (0.0 = deterministic).
             audit_trail: Optional AuditTrail for logging all AI operations.
             on_progress: Callback(current_index, total_pairs, analysis) for progress.
+            analyze_fn: Optional callable(focal, reference) -> dict.  When
+                provided, the mapper calls this instead of the Anthropic API.
+                The dict must match the record_strm_mapping tool schema:
+                ``{"relationship", "rationale", "strength", "confidence",
+                "analysis", "focal_coverage", "reference_coverage"}``.
         """
-        if _anthropic is None:
-            raise ImportError(
-                "The 'anthropic' package is required for AI-powered mapping. "
-                "Install it with: pip install nist-strm[ai]"
-            )
-
         self._engine = engine
         self._model = model
         self._max_tokens = max_tokens
         self._temperature = temperature
         self._audit_trail = audit_trail
         self._on_progress = on_progress
+        self._analyze_fn = analyze_fn
         self._system_prompt = _SYSTEM_PROMPT
         self._system_prompt_hash = AIProvenance.hash_prompt(_SYSTEM_PROMPT)
 
-        self._client = _anthropic.Anthropic(api_key=api_key)
+        if analyze_fn is not None:
+            # Callback mode — no API client needed
+            self._client = None
+        else:
+            # API mode — require the anthropic package
+            if _anthropic is None:
+                raise ImportError(
+                    "The 'anthropic' package is required for API-based mapping. "
+                    "Install it with: pip install nist-strm[ai]  — or provide "
+                    "an analyze_fn callback to use callback mode."
+                )
+            self._client = _anthropic.Anthropic(api_key=api_key)
 
     @property
     def system_prompt(self) -> str:
@@ -400,7 +424,10 @@ class AIMapper:
         focal: FrameworkElement,
         reference: FrameworkElement,
     ) -> MappingAnalysis:
-        """Analyze a single focal/reference element pair using Claude.
+        """Analyze a single focal/reference element pair.
+
+        Uses either the Anthropic API or the ``analyze_fn`` callback,
+        depending on how the mapper was initialized.
 
         Returns a MappingAnalysis with the full MappingRecord and raw output.
         """
@@ -408,29 +435,36 @@ class AIMapper:
         activity_id = str(uuid.uuid4())
         started_at = datetime.now(timezone.utc)
 
-        response = self._client.messages.create(
-            model=self._model,
-            max_tokens=self._max_tokens,
-            temperature=self._temperature,
-            system=self._system_prompt,
-            tools=[_STRM_ANALYSIS_TOOL],
-            tool_choice={"type": "tool", "name": "record_strm_mapping"},
-            messages=[{"role": "user", "content": user_prompt}],
-        )
+        if self._analyze_fn is not None:
+            # --- Callback mode ---
+            tool_result = self._analyze_fn(focal, reference)
+            ended_at = datetime.now(timezone.utc)
+            tokens_used = 0
+        else:
+            # --- API mode ---
+            response = self._client.messages.create(
+                model=self._model,
+                max_tokens=self._max_tokens,
+                temperature=self._temperature,
+                system=self._system_prompt,
+                tools=[_STRM_ANALYSIS_TOOL],
+                tool_choice={"type": "tool", "name": "record_strm_mapping"},
+                messages=[{"role": "user", "content": user_prompt}],
+            )
 
-        ended_at = datetime.now(timezone.utc)
-        tokens_used = response.usage.input_tokens + response.usage.output_tokens
+            ended_at = datetime.now(timezone.utc)
+            tokens_used = response.usage.input_tokens + response.usage.output_tokens
 
-        # Extract the tool call result
-        tool_result: dict[str, Any] = {}
-        for block in response.content:
-            if block.type == "tool_use" and block.name == "record_strm_mapping":
-                tool_result = block.input
-                break
+            # Extract the tool call result
+            tool_result = {}
+            for block in response.content:
+                if block.type == "tool_use" and block.name == "record_strm_mapping":
+                    tool_result = block.input
+                    break
 
         if not tool_result:
             raise ValueError(
-                f"Claude did not produce a tool call for pair "
+                f"No analysis produced for pair "
                 f"{focal.identifier} -> {reference.identifier}"
             )
 
