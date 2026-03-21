@@ -1,0 +1,2 @@
+[console_scripts]
+kg-enrich = kg_enrichment.cli:main
